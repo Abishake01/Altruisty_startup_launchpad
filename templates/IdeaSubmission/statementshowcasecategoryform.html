@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Idea Category submission</h2>
+<br />
+<br />
+<form id="course-form">
+
+    <!-- Course Details Card -->
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Problem Statement Showcase category form</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- First Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="category">Category</label>
+                        <input class="form-control"
+                               id="category"
+                               type="text"
+                               placeholder="Category"
+                               maxlength="250"
+                               required />
+                    </div>
+                    
+                    <!-- Second Row -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
+    </div>
+</form>
+
+<script>
+    async function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formd = new FormData();
+        
+        
+        formd.append('category', document.getElementById('category').value);
+        
+
+        const url = `http://127.0.0.1:8000/api/uploadstatementshowcasecategory/`;
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: formd,
+            });
+
+            if (response.ok) {
+                alert('Category uploaded successfully!');
+            } else {
+                alert('Error uploading category. Please try again.');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('An error occurred while submitting the form.');
+        }
+    }
+
+    // Attach the submit event to the form
+    document.getElementById('course-form').addEventListener('submit', submitForm);
+</script>
+
+{% endblock %}

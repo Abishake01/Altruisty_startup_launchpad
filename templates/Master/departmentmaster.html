@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Department Master</h2>
+<br />
+<br />
+
+<!-- Alert Box for Messages -->
+<div id="alert-box" class="alert alert-success" style="display:none;" role="alert"></div>
+<div id="alert-box-error" class="alert alert-danger" style="display:none;" role="alert"></div>
+
+<!-- Department Form -->
+<form id="department-form" method="post">
+    {% csrf_token %}
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Department Information</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- Department Name -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="id_name">Department Name</label>
+                        {{ form.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+    </div>
+</form>
+
+<!-- Display the Existing Departments -->
+<h4 style="margin-top:20px;">Existing Departments</h4>
+<table class="table table-bordered" style="margin-top: 20px;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Department Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for department in departments %}
+        <tr>
+            <td>{{ department.id }}</td> <!-- Displaying the UUID -->
+            <td>{{ department.name }}</td>
+            <td>
+                <!-- Delete Department Button -->
+                <form method="post" action="{% url 'delete_department' department.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    // Display success and error messages based on Django messages
+    {% if messages %}
+        {% for message in messages %}
+            var alertBox = document.getElementById(message.tags === 'error' ? 'alert-box-error' : 'alert-box');
+            alertBox.style.display = 'block';
+            alertBox.innerHTML = '{{ message }}';
+        {% endfor %}
+    {% endif %}
+</script>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'layout2.html' %}
+{% block content %}
+<h2>Course Information</h2>
+<br />
+<br />
+<form id="course-form">
+    
+    <!-- Course Details Card -->
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Upload Banner</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- First Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="question">Banner 1</label>
+                        <input class="form-control"
+                               id="banner1"
+                               type="file"
+                               placeholder="Question"
+                               maxlength="250"
+                               required />
+                    </div>
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="sample-input">Banner 2</label>
+                        <input class="form-control"
+                               id="banner2"
+                               type="file"
+                               placeholder="Sample input"
+                               maxlength="100"
+                               required />
+                    </div>
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="sample-output">Banner 3</label>
+                        <input class="form-control"
+                               id="banner3"
+                               type="file"
+                               placeholder="Sample output"
+                               maxlength="100"
+                               required />
+                    </div>
+                    <!-- Second Row -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
+    </div>
+</form>
+
+<script>
+    async function validateImageDimensions(file, width, height) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => {
+                    if (img.width === width && img.height === height) {
+                        resolve(true);
+                    } else {
+                        resolve(false);
+                    }
+                };
+                img.onerror = () => reject('Error loading image');
+                img.src = e.target.result;
+            };
+            reader.onerror = () => reject('Error reading file');
+            reader.readAsDataURL(file);
+        });
+    }
+
+    async function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const requiredWidth = 1587;
+        const requiredHeight = 2245;
+
+        const file1 = document.getElementById('banner1').files[0];
+        const file2 = document.getElementById('banner2').files[0];
+        const file3 = document.getElementById('banner3').files[0];
+
+        // Validate dimensions
+        if (
+            !(await validateImageDimensions(file1, requiredWidth, requiredHeight)) ||
+            !(await validateImageDimensions(file2, requiredWidth, requiredHeight)) ||
+            !(await validateImageDimensions(file3, requiredWidth, requiredHeight))
+        ) {
+            alert(`All images must have dimensions ${requiredWidth}x${requiredHeight}.`);
+            return;
+        }
+
+        const formd = new FormData();
+        formd.append('file1', file1);
+        formd.append('file2', file2);
+        formd.append('file3', file3);
+
+        const url = `http://127.0.0.1:8000/uploadbanner/`;
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: formd,
+            });
+
+            if (response.ok) {
+                alert('Uploaded successfully!');
+            } else {
+                alert('Error uploading. Please try again.');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('An error occurred while submitting the form.');
+        }
+    }
+
+    // Attach the submit event to the form
+    document.getElementById('course-form').addEventListener('submit', submitForm);
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Team Category Master</h2>
+<br />
+<br />
+
+<!-- Form with Client-Side Encryption -->
+<form action="{% url 'team_category_master' %}" method="post" enctype="multipart/form-data" onsubmit="encryptFormData()">
+    {% csrf_token %}
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Team Information</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- First Row -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="team_category">Team Category</label>
+                        <input class="form-control"
+                               id="team_category"
+                               name="team_category"
+                               type="text"
+                               placeholder="Enter team category"
+                               aria-label="Team Category"
+                               maxlength="50"
+                               pattern="^[A-Za-z .]+$"
+                               required />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+    </div>
+</form>
+
+<!-- Display the Team Categories in a Table -->
+<h4 style="margin-top:20px;">Existing Team Categories</h4>
+<table class="table table-bordered" style="margin-top: 20px;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Team Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for team_category in team_categories %}
+        <tr>
+            <td>{{ team_category.id }}</td>
+            <td>{{ team_category.team_category }}</td>
+            <td>
+                <!-- Delete Button -->
+                <form action="{% url 'team_category_master' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="delete" value="{{ team_category.id }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Add CryptoJS for Client-Side Encryption -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+    function encryptFormData() {
+        const teamCategoryInput = document.getElementById("team_category");
+        const plainText = teamCategoryInput.value;
+
+        // Ensure the encryption key is properly hashed and parsed
+        const key = CryptoJS.enc.Utf8.parse(CryptoJS.SHA256(encryptionKey).toString(CryptoJS.enc.Hex).substring(0, 32));
+
+        // Generate a 16-byte IV
+        const iv = CryptoJS.lib.WordArray.random(16);
+
+        // Encrypt the plaintext using AES
+        const encrypted = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(plainText), key, {
+            iv: iv,
+            mode: CryptoJS.mode.CBC,
+            padding: CryptoJS.pad.Pkcs7,
+        });
+
+        // Combine IV and ciphertext
+        const combined = CryptoJS.lib.WordArray.create(iv.words.concat(encrypted.ciphertext.words), iv.sigBytes + encrypted.ciphertext.sigBytes);
+
+        // Encode the combined data in Base64
+        let encryptedData = CryptoJS.enc.Base64.stringify(combined);
+
+        // Ensure Base64 padding is correct (add "=" if needed)
+        const padding = encryptedData.length % 4 === 0 ? "" : "=".repeat(4 - (encryptedData.length % 4));
+        encryptedData += padding;
+
+        console.log("Encrypted Data:", encryptedData); // Debug log for verification
+
+        // Set encrypted data to the form input
+        teamCategoryInput.value = encryptedData;
+    }
+</script>
+{% endblock %}

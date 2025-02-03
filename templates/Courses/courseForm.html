@@ -1,0 +1,225 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Course Information</h2>
+<br />
+<br />
+<form action="{% url 'add-course' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!-- Course Details Card -->
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Course Details</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- First Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="course-title">Course Title</label>
+                        <input class="form-control"
+                               id="course-title"
+                               name="course_title"
+                               type="text"
+                               placeholder="Course Title"
+                               maxlength="100"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="skill-level">Skill Level</label>
+                        <select class="form-select"
+                                id="skill-level"
+                                name="skill_level"
+                                required>
+                            <option value="" disabled selected>Select Skill Level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="category">Category</label>
+                        <select class="form-select"
+                                id="category"
+                                name="category"
+                                required>
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="music">Music</option>
+                            <option value="computer">Computer</option>
+                            <option value="arts">Arts</option>
+                            <option value="science">Science</option>
+                        </select>
+                    </div>
+
+                    <!-- Second Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="instructor-name">Instructor Name</label>
+                        <select name="instructor" id="instructor_name" name="instructor_name" class="form-select" required>
+                            <option value="" disabled selected>Select Instructor</option>
+                            {% for instructor in instructors %}
+                            <option value="{{ instructor.id }}">{{ instructor.id }} - {{ instructor.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="deadline">Deadline</label>
+                        <input class="form-control"
+                               id="deadline"
+                               name="deadline"
+                               type="date"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="language">Language</label>
+                        <select class="form-select"
+                                id="language"
+                                name="language"
+                                required>
+                            <option value="" disabled selected>Select Language</option>
+                            <option value="english">English</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="kannada">Kannada</option>
+                        </select>
+                    </div>
+
+                    <!-- Third Row -->
+                    <div class="col-md-4">
+                        <label class="form-label" for="price">Price</label>
+                        <input class="form-control"
+                               id="price"
+                               name="price"
+                               type="number"
+                               required />
+                    </div>
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="short-description">Short Description</label>
+                        <textarea class="form-control"
+                                  id="short-description"
+                                  name="short_description"
+                                  placeholder="Enter a short description"
+                                  maxlength="300"
+                                  rows="5"
+                                  required></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="about-course">About Course</label>
+                        <textarea class="form-control"
+                                  id="about-course"
+                                  name="about_course"
+                                  placeholder="Detailed course information"
+                                  rows="5"
+                                  required></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label" for="what-we-learn">What Do We Learn?</label>
+                        <textarea class="form-control"
+                                  id="what-we-learn"
+                                  name="what_we_learn"
+                                  placeholder="Outline the learning outcomes"
+                                  rows="5"
+                                  required></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Upload Files Card -->
+<div class="col-xl-12" style="margin-top: 30px;">
+    <div class="card">
+        <div class="card-header pb-0">
+            <h4 style="margin-bottom:20px">Upload Files</h4>
+        </div>
+        <div class="card-body custom-input">
+            <div class="row g-3">
+                <div class="col-md-4" style="margin-bottom:20px">
+                    <label class="form-label" for="course-image-box">Course Image (Box View)</label>
+                    <input class="form-control"
+                           id="course-image-box"
+                           name="course_image_box"
+                           type="file"
+                           accept="image/*"
+                           onchange="validateFileSize(this, 2)" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="course-image-list">Course Image (List View)</label>
+                    <input class="form-control"
+                           id="course-image-list"
+                           name="course_image_list"
+                           type="file"
+                           accept="image/*"
+                           onchange="validateFileSize(this, 2)" />
+                </div>
+                <div class="col-md-4" style="margin-bottom:20px">
+                    <label class="form-label" for="course-intro-video">Course Intro Video</label>
+                    <input class="form-control"
+                           id="course-intro-video"
+                           name="course_intro_video"
+                           type="file"
+                           accept="video/*"
+                           onchange="validateFileSize(this, 10)" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    function validateFileSize(input, maxSizeMB) {
+        const file = input.files[0];
+        if (!file) return;
+
+        if (file.size > maxSizeMB * 1024 * 1024) {
+            alert(`File size exceeds the maximum limit of ${maxSizeMB} MB.`);
+            input.value = ""; // Reset the input
+        }
+    }
+
+    function validateFileSizeAndDimensions(input, maxSizeMB, requiredWidth, requiredHeight) {
+        const file = input.files[0];
+        if (!file) return;
+
+        // Validate file size
+        if (file.size > maxSizeMB * 1024 * 1024) {
+            alert(`File size exceeds the maximum limit of ${maxSizeMB} MB.`);
+            input.value = ""; // Reset the input
+            return;
+        }
+
+        // Validate image dimensions
+        const img = new Image();
+        img.onload = function () {
+            if (img.width !== requiredWidth || img.height !== requiredHeight) {
+                alert(`Invalid image dimensions! Required: ${requiredWidth}px x ${requiredHeight}px.\nUploaded: ${img.width}px x ${img.height}px.`);
+                input.value = ""; // Reset the input
+            }
+        };
+        img.onerror = function () {
+            alert("Unable to validate image. Please upload a valid image file.");
+            input.value = ""; // Reset the input
+        };
+        img.src = URL.createObjectURL(file);
+    }
+
+    document.getElementById('course-image-box').addEventListener('change', function () {
+        validateFileSizeAndDimensions(this, 2, 1417, 800); // Image size: 2 MB, Dimensions: 1417x800
+    });
+
+    document.getElementById('course-image-list').addEventListener('change', function () {
+        validateFileSizeAndDimensions(this, 2, 920, 1280); // Image size: 2 MB, Dimensions: 920x1280
+    });
+
+    document.getElementById('course-intro-video').addEventListener('change', function () {
+        validateFileSize(this, 10); // Video size: 10 MB
+    });
+</script>
+
+{% endblock %}

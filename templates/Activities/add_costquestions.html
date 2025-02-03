@@ -1,0 +1,206 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Cost Category Questions</h2>
+<br />
+<br />
+
+<!-- Alert Box -->
+<div id="alert-box" class="alert alert-danger" style="display:none;" role="alert"></div>
+
+<form id="category-question-form" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+    {% csrf_token %}
+
+    <!-- Dropdown for Category Selection -->
+    <div class="col-md-12" style="margin-bottom:20px">
+        <label class="form-label" for="category">Select Category</label>
+        <select class="form-control" id="category" name="category" required>
+            <option value="" disabled selected>Select a category</option>
+            {% for category in category_list %}
+            <option value="{{ category.categroy_name }}">{{ category.categroy_name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Category Information</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+
+                    <!-- Question Number -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="question_number">Question Number</label>
+                        <input class="form-control"
+                               id="question_number"
+                               name="question_number"
+                               type="number"
+                               placeholder="Enter question number"
+                               maxlength="3"
+                               required />
+                    </div>
+                    
+                    <!-- Question -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="question">Question</label>
+                        <input class="form-control"
+                               id="question"
+                               name="question"
+                               type="text"
+                               placeholder="Enter question"
+                               maxlength="300"
+                               required />
+                    </div>
+
+                    <!-- Options -->
+                    <div class="row">
+                        {% for i in "1234" %}
+                        <div class="col-md-6" style="margin-bottom:20px">
+                            <label class="form-label" for="option{{ i }}">Option {{ i }}</label>
+                            <input class="form-control"
+                                   id="option{{ i }}"
+                                   name="option{{ i }}"
+                                   type="text"
+                                   placeholder="Enter option {{ i }}"
+                                   maxlength="150"
+                                   required />
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Efficiencies -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label">Efficiencies</label>
+                        <div class="d-flex justify-content-between">
+                            {% for i in "1234" %}
+                            <input class="form-control mx-1"
+                                   style="width: 22%;"
+                                   id="efficiency{{ i }}"
+                                   name="efficiency{{ i }}"
+                                   type="text"
+                                   placeholder="Efficiency {{ i }} (e.g., 50%)"
+                                   maxlength="4"
+                                   pattern="^[0-9]+%?$"
+                                   required />
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Justifications -->
+                    {% for i in "1234" %}
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="justification{{ i }}">Justification {{ i }}</label>
+                        <textarea class="form-control"
+                                  id="justification{{ i }}"
+                                  name="justification{{ i }}"
+                                  placeholder="Enter justification {{ i }}"
+                                  maxlength="300"
+                                  rows="3"
+                                  required></textarea>
+                    </div>
+                    {% endfor %}
+
+                    <!-- Correct Option -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="correct_option">Correct Option</label>
+                        <input class="form-control"
+                               id="correct_option"
+                               name="correct_option"
+                               type="text"
+                               placeholder="Enter correct option"
+                               maxlength="150"
+                               required />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+    </div>
+</form>
+
+<!-- Display Existing Data in a Table -->
+<h4 style="margin-top:20px;">Existing Category Data</h4>
+<table class="table table-bordered" style="margin-top: 20px;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Question</th>
+            <th>Options</th>
+            <th>Efficiencies</th>
+            <th>Justifications</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for category in categories %}
+        <tr>
+            <td>{{ category.id }}</td>
+            <td>{{ category.selected_category.name }}</td>
+            <td>{{ category.question }}</td>
+            <td>
+                <ul>
+                    <li>{{ category.option1 }}</li>
+                    <li>{{ category.option2 }}</li>
+                    <li>{{ category.option3 }}</li>
+                    <li>{{ category.option4 }}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>{{ category.efficiency_1 }}</li>
+                    <li>{{ category.efficiency_2 }}</li>
+                    <li>{{ category.efficiency_3 }}</li>
+                    <li>{{ category.efficiency_4 }}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>{{ category.description_1 }}</li>
+                    <li>{{ category.description_2 }}</li>
+                    <li>{{ category.description_3 }}</li>
+                    <li>{{ category.description_4 }}</li>
+                </ul>
+            </td>
+            <td>
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="delete" value="{{ category.id }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    function validateForm() {
+        let alertBox = document.getElementById('alert-box');
+        alertBox.style.display = 'none';
+        alertBox.innerHTML = '';
+
+        // Collect all required fields
+        const requiredFields = document.querySelectorAll('#category-question-form [required]');
+        for (const field of requiredFields) {
+            if (!field.value.trim()) {
+                alertBox.style.display = 'block';
+                alertBox.innerHTML = 'Please fill all required fields.';
+                field.focus();
+                return false;
+            }
+        }
+
+        return true;
+    }
+</script>
+
+{% endblock %}

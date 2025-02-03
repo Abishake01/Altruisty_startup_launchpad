@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Course Information</h2>
+<br />
+<br />
+<form id="course-form">
+
+    <!-- Course Details Card -->
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Upload weekly challenges</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- First Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="question">Question</label>
+                        <input class="form-control"
+                               id="question"
+                               type="text"
+                               placeholder="Question"
+                               maxlength="250"
+                               required />
+                    </div>
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="sample-input">Sample Input</label>
+                        <input class="form-control"
+                               id="sample-input"
+                               type="text"
+                               placeholder="Sample input"
+                               maxlength="100"
+                               required />
+                    </div>
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="sample-output">Sample Output</label>
+                        <input class="form-control"
+                               id="sample-output"
+                               type="text"
+                               placeholder="Sample output"
+                               maxlength="100"
+                               required />
+                    </div>
+                    <!-- Second Row -->
+                    <div class="col-md-4">
+                        <label class="form-label" for="actual-output">Actual Output</label>
+                        <input class="form-control"
+                               id="actual-output"
+                               type="text"
+                               placeholder="Actual output"
+                               required />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
+    </div>
+</form>
+
+<script>
+    async function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formd = new FormData();
+        let timestamp = new Date().toISOString();
+        let question_id = "DQ" + timestamp;
+
+        formd.append('qid', question_id);
+        formd.append('question', document.getElementById('question').value);
+        formd.append('si', document.getElementById('sample-input').value);
+        formd.append('so', document.getElementById('sample-output').value);
+        formd.append('ao', document.getElementById('actual-output').value);
+        const url = `http://127.0.0.1:8000/uploadwq/`;
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: formd,
+            });
+
+            if (response.ok) {
+                alert('Question uploaded successfully!');
+            } else {
+                alert('Error uploading question. Please try again.');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('An error occurred while submitting the form.');
+        }
+    }
+
+    // Attach the submit event to the form
+    document.getElementById('course-form').addEventListener('submit', submitForm);
+</script>
+
+{% endblock %}
+qqq

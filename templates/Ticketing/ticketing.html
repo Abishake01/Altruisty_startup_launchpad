@@ -1,0 +1,165 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<style>
+    .body-container {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .filter-button {
+        width: 33%;
+        height: 75px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .filter-button:hover {
+            background-color: #0056b3;
+        }
+
+        .filter-button.active {
+            background-color: red;
+        }
+
+    .table-container {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .table-header {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .todo-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .todo-table th,
+        .todo-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .todo-table th {
+            background-color: #f8f9fa;
+        }
+
+        .todo-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .todo-table tbody tr:hover {
+            background-color: #ddd;
+        }
+
+    .text-center {
+        text-align: center;
+        font-style: italic;
+        color: gray;
+    }
+
+    @media (max-width: 600px) {
+        .body-container {
+            flex-direction: column;
+        }
+
+        .filter-buttons {
+            flex-wrap: wrap;
+        }
+    }
+</style>
+
+<script>
+    // Redirect to filter tickets by status
+    function filterTickets(status) {
+        const url = new URL(window.location.href);
+        if (status) {
+            url.searchParams.set('status', status);
+        } else {
+            url.searchParams.delete('status');
+        }
+        window.location.href = url;
+    }
+</script>
+
+<div class="body-container">
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button class="filter-button {% if selected_status == '' %}active{% endif %}" onclick="filterTickets('')">
+            Total Tickets<br /> <span style="font-size:20px">{{ total_tickets }}</span>
+        </button>
+        <button class="filter-button {% if selected_status == 'Closed' %}active{% endif %}" onclick="filterTickets('Closed')">
+            Closed Tickets<br /> <span style="font-size:20px">{{ closed_tickets }}</span>
+        </button>
+        <button class="filter-button {% if selected_status == 'Pending' %}active{% endif %}" onclick="filterTickets('Pending')">
+            Pending Tickets<br /> <span style="font-size:20px">{{ pending_tickets }}</span>
+        </button>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-container">
+        <div class="table-header">
+            {% if selected_status == '' %}
+            Total Tickets
+            {% elif selected_status == 'Closed' %}
+            Closed Tickets
+            {% elif selected_status == 'Pending' %}
+            Pending Tickets
+            {% endif %}
+        </div>
+        <table class="todo-table">
+            <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Title</th>
+                    <th>Issue Type</th>
+                    <th>Created Date</th>
+                    <th>Created Time</th>
+                    <th>Assigned To</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ticket in tickets %}
+                <tr>
+                    <td>{{ ticket.id }}</td>
+                    <td>{{ ticket.title }}</td>
+                    <td>{{ ticket.issue_type }}</td>
+                    <td>{{ ticket.created_date }}</td>
+                    <td>{{ ticket.created_time }}</td>
+                    <td>{{ ticket.assigned_to }}</td>
+                    <td>{{ ticket.status }}</td>
+                    <td><i class="fa fa-eye" style="cursor:pointer;"></i></td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="8" class="text-center">No tickets available</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

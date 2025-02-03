@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<div class="card-body">
+    <div class="table-responsive custom-scrollbar">
+        <table class="display" id="project-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Title of the Project</th>
+                    <th>Problem Statement</th>
+                    <th>User ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in idea %}
+                <tr>
+                    <td>{{entry.name_of_innovator}}</td>
+                    <td>{{entry.age}}</td>
+                    <td>{{entry.gender}}</td>
+                    <td>{{entry.title_of_project}}</td>
+                    <td>{{entry.statement_id}}</td>
+                    <td>{{entry.user_id}}</td>
+                    <td>
+                        <ul class="action">
+                            <li class="view"><a href="#"><i class="fas fa-eye"></i></a></li>
+                        </ul>
+                    </td>
+
+                </tr>
+          {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .card-body {
+        padding: 20px;
+        background-color: #f8f9fa;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .display {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    thead th {
+        background-color: #343a40;
+        color: white;
+        padding: 10px;
+        text-align: left;
+    }
+
+    tbody td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .action {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+        .action li {
+            display: inline;
+        }
+
+        .action a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+            .action a:hover {
+                color: #0056b3;
+            }
+
+    .icon-eye:before {
+        content: "\f06e"; /* FontAwesome Unicode for the eye icon */
+        font-family: "FontAwesome";
+    }
+</style>
+{% endblock %}

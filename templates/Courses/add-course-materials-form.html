@@ -1,0 +1,166 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Course Information</h2>
+<br />
+<br />
+<form action="{% url 'add_course_material' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!-- Course Details Card -->
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Course Details</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="course">Select Course</label>
+                        <select class="form-select" id="course" name="course_id" required>
+                            <option value="" disabled selected>Select Course</option>
+                            {% for course in courses %}
+                            <option value="{{ course.id }}">{{ course.course_id }} - {{ course.course_title }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <!-- Other course fields -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lecture Details Card -->
+    <div class="col-xl-12" style="margin-top: 30px;">
+        <div class="card">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Lecture Details</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <div class="col-md-6" style="margin-bottom:20px">
+                        <label class="form-label" for="lecture-name">Lecture Name</label>
+                        <input class="form-control"
+                               id="lecture-name"
+                               name="lecture_name"
+                               type="text"
+                               max-length="100"
+                               placeholder="Enter Lecture Name"
+                               required />
+                    </div>
+                    <div class="col-md-6" style="margin-bottom:20px">
+                        <label class="form-label" for="lecture-duration">Total Duration (minutes)</label>
+                        <input class="form-control"
+                               id="lecture-duration"
+                               name="lecture_duration"
+                               type="number"
+                               placeholder="Enter Duration"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="intro-title">Introduction Title</label>
+                        <input class="form-control"
+                               id="intro-title"
+                               name="intro_title"
+                               type="text"
+                               placeholder="Intro Title"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="intro-video">Introduction Video</label>
+                        <input class="form-control"
+                               id="intro-video"
+                               name="intro_video"
+                               type="file"
+                               accept="video/*"
+                               onchange="validateFileSize(this, 10)" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="intro-video-duration">Intro Video Duration</label>
+                        <input class="form-control"
+                               id="intro-video-duration"
+                               name="intro_video_duration"
+                               type="text"
+                               placeholder="Intro video duration"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="material-title">Lecture Material Title</label>
+                        <input class="form-control"
+                               id="material-title"
+                               name="material_title"
+                               type="text"
+                               placeholder="Material Title"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="material-video">Lecture Video Material</label>
+                        <input class="form-control"
+                               id="material-video"
+                               name="material_video"
+                               type="file"
+                               accept="video/*"
+                               onchange="validateFileSize(this, 10)" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="video-duration">Video Duration (minutes)</label>
+                        <input class="form-control"
+                               id="video-duration"
+                               name="video_duration"
+                               type="number"
+                               placeholder="Duration"
+                               required />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="task">Task</label>
+                        <textarea class="form-control"
+                                  id="task"
+                                  name="task"
+                                  placeholder="Enter Task Details"
+                                  rows="5"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="reading-material">Reading Material (PDF)</label>
+                        <input class="form-control"
+                               id="reading-material"
+                               name="reading_material"
+                               type="file"
+                               accept="application/pdf"
+                               onchange="validateFileSize(this, 5)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    function validateFileSize(input, maxSizeMB) {
+        const file = input.files[0];
+        if (file && file.size > maxSizeMB * 1024 * 1024) {
+            alert(`File size exceeds the maximum limit of ${maxSizeMB} MB.`);
+            input.value = ""; // Reset the input
+        }
+    }
+
+    // Apply validation for video and PDF files
+    document.getElementById('intro-video').addEventListener('change', function () {
+        validateFileSize(this, 200); // Videos should be less than 200 MB
+    });
+
+    document.getElementById('material-video').addEventListener('change', function () {
+        validateFileSize(this, 200); // Videos should be less than 200 MB
+    });
+
+    document.getElementById('reading-material').addEventListener('change', function () {
+        validateFileSize(this, 10); // PDFs should be less than 10 MB
+    });
+</script>
+
+{% endblock %}

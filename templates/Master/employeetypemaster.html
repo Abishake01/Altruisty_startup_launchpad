@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Employee Type Master</h2>
+<br />
+<br />
+
+<!-- Alert Box for Messages -->
+<div id="alert-box" class="alert alert-success" style="display:none;" role="alert"></div>
+<div id="alert-box-error" class="alert alert-danger" style="display:none;" role="alert"></div>
+
+<!-- Employee Type Form -->
+<form id="designation-form" method="post">
+    {% csrf_token %}
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Employee Type Information</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- Employee Type Input Field -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="id_name">Employee Type</label>
+                        {{ form.name }}  <!-- This will render the Employee Type field -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button for Creating Employee Type -->
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <button class="btn btn-primary" type="submit">Submit Employee Type</button>
+        </div>
+    </div>
+</form>
+
+<!-- Display the Existing Employee Types -->
+<h4 style="margin-top:20px;">Existing Employee Types</h4>
+<table class="table table-bordered" style="margin-top: 20px;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Employee Type Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee_type in employee_types %}
+        <tr>
+            <td>{{ employee_type.id }}</td>
+            <td>{{ employee_type.name }}</td>
+            <td>
+                <!-- Separate Delete Form for Each Employee Type -->
+                <form method="post" action="{% url 'delete_employee_type' employee_type.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- JavaScript to Display Alert Messages -->
+<script>
+    {% if messages %}
+        {% for message in messages %}
+            var alertBox = document.getElementById(message.tags === 'error' ? 'alert-box-error' : 'alert-box');
+            alertBox.style.display = 'block';
+            alertBox.innerHTML = '{{ message }}';
+        {% endfor %}
+    {% endif %}
+</script>
+
+{% endblock %}
