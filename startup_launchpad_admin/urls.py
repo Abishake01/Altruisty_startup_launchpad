@@ -27,7 +27,9 @@ urlpatterns = [
     path('', include('IdeaSubmissions.urls')),
     path('',include('Activities.urls')),
     path('',include('Attendance.urls')),
+ 
     path('',include('Banner.urls')),
+ 
 ]
 
 # Serve media files during development

@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'IdeaSubmissions',
     'Activities',
     'Attendance',
+ 
     'Banner',
+ 
 ]
 
 MIDDLEWARE = [
@@ -79,11 +81,13 @@ WSGI_APPLICATION = 'startup_launchpad_admin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+ 
         'NAME': 'altruistystartuplaunchpad1',
         'USER': 'root',
         'PASSWORD': 'Nilla@123',  
         'HOST': 'localhost',
         'PORT': '3306',
+  
     }
 }
 

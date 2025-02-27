@@ -1,8 +1,19 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\Ticketing"
   ],
   "SelectedNode": "\\Ticketing\\views.py",
+=======
+    "\\Courses",
+    "\\Master",
+    "\\startup_launchpad_admin",
+    "\\templates",
+    "\\templates\\Master",
+    "\\Ticketing"
+  ],
+  "SelectedNode": "\\Master\\views.py",
+>>>>>>> 46402b7df74961cd2218c1e0e48dd8c09f4e9852
   "PreviewInSolutionExplorer": false
 }
