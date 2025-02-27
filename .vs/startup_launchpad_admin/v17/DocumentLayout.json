@@ -1,0 +1,287 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ticketing\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\startup_launchpad_admin\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:startup_launchpad_admin\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Master\\issue_type.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:templates\\Master\\issue_type.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ticketing\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Master\\instructor.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:templates\\Master\\instructor.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ticketing\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:templates\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Courses\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Master\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\startup_launchpad_admin\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:startup_launchpad_admin\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Ticketing\\ticketing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:templates\\Ticketing\\ticketing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Courses\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Master\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Master\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Courses\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Courses\\courseForm.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:templates\\Courses\\courseForm.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "urls.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\startup_launchpad_admin\\urls.py",
+              "RelativeDocumentMoniker": "startup_launchpad_admin\\urls.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\startup_launchpad_admin\\urls.py",
+              "RelativeToolTip": "startup_launchpad_admin\\urls.py",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABkAAAAfAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T09:17:14.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "views.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\views.py",
+              "RelativeDocumentMoniker": "Master\\views.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\views.py",
+              "RelativeToolTip": "Master\\views.py",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T07:00:18.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "views.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\views.py",
+              "RelativeDocumentMoniker": "Courses\\views.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\views.py",
+              "RelativeToolTip": "Courses\\views.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-18T10:23:12.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "layout.html",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\layout.html",
+              "RelativeDocumentMoniker": "templates\\layout.html",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\layout.html",
+              "RelativeToolTip": "templates\\layout.html",
+              "ViewState": "AgIAAO4FAAAAAAAAAAAuwPAFAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-18T10:25:00.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "urls.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\urls.py",
+              "RelativeDocumentMoniker": "Ticketing\\urls.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\urls.py",
+              "RelativeToolTip": "Ticketing\\urls.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T09:30:11.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "instructor.html",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Master\\instructor.html",
+              "RelativeDocumentMoniker": "templates\\Master\\instructor.html",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Master\\instructor.html",
+              "RelativeToolTip": "templates\\Master\\instructor.html",
+              "ViewState": "AgIAABECAAAAAAAAAAAAABoCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-28T06:53:54.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "issue_type.html",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Master\\issue_type.html",
+              "RelativeDocumentMoniker": "templates\\Master\\issue_type.html",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Master\\issue_type.html",
+              "RelativeToolTip": "templates\\Master\\issue_type.html",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-28T06:53:37.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "views.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\views.py",
+              "RelativeDocumentMoniker": "Ticketing\\views.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\views.py",
+              "RelativeToolTip": "Ticketing\\views.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T09:20:00.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "models.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\models.py",
+              "RelativeDocumentMoniker": "Ticketing\\models.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Ticketing\\models.py",
+              "RelativeToolTip": "Ticketing\\models.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T09:26:51.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "settings.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\startup_launchpad_admin\\settings.py",
+              "RelativeDocumentMoniker": "startup_launchpad_admin\\settings.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\startup_launchpad_admin\\settings.py",
+              "RelativeToolTip": "startup_launchpad_admin\\settings.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-18T10:23:32.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ticketing.html",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Ticketing\\ticketing.html",
+              "RelativeDocumentMoniker": "templates\\Ticketing\\ticketing.html",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Ticketing\\ticketing.html",
+              "RelativeToolTip": "templates\\Ticketing\\ticketing.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-28T09:33:17.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "urls.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\urls.py",
+              "RelativeDocumentMoniker": "Courses\\urls.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\urls.py",
+              "RelativeToolTip": "Courses\\urls.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T09:30:15.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "models.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\models.py",
+              "RelativeDocumentMoniker": "Master\\models.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\models.py",
+              "RelativeToolTip": "Master\\models.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAEAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T07:04:12.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "urls.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\urls.py",
+              "RelativeDocumentMoniker": "Master\\urls.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Master\\urls.py",
+              "RelativeToolTip": "Master\\urls.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T06:59:14.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "models.py",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\models.py",
+              "RelativeDocumentMoniker": "Courses\\models.py",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\Courses\\models.py",
+              "RelativeToolTip": "Courses\\models.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVDhPtZTBTlpBFIZ/QTDQVqVCaFCjELQr2ek7GNOGpi5qmtjYtD6JL\u002BDKR6ALm1DSbt0a41INurBpXBCgQhVFEeXS/5/cS7hqTJu0f/JxmXvPnJkz55zBP1W73e6x/zrykTB5RLx68YBapE6OybVeSN0OQ\u002BQlSZM48ZOH1CQ/SI5kSZV0pJ29IwWila0/RLZF8oHIR0fPiFa548zn81nT09NWJBKxPB6P65uN5nwlMQKPfqgnZJx0joCTMTY2huXlZczMzCAQCGBqagoDAwPo6XEdvQY6oscaOAcfIW\u002BJEoJYLIbZ2Vmk02kMDg6iWq2iWCya9xMTEwiFQrAsC2dnZzKXauQTOXaWek4Usp6Yn5/H4uIi4vG4KgEXFxeoVCro6\u002BuD3\u002B9Hq9VCNpvF6uqqzKXv5AXJOzvUzt7YT4TDYZyfnxsHqVTK7EqMjo5iaGjIOFxfX8fBwYHMpV8kQ47vdTgyMoLT01MzYWtrC/39/YhGozg5OcHl5SUymQw2NzdRKpVkLnUcOklxyev14ubmBvV6HUdHR1hbW0O5XEaz2cTu7i42NjbQaDRsa7fuddjb24tgMGjCSyaTJlQl4erqCjs7O6jVari\u002B7jSHS/c6dEpkcnISrD/jWMlRuIlEAgsLCxgfV5XdVbfDtv3E9va2CXV4eNiUipwqEToGlUyhUMD\u002B/r5tbaS5Zr6TlKfkNYlqoLPL5/M4PDw0Icuh2Nvbw8rKCnK5nElal5Qd1WHFjCi13hdyp/VYd9bc3Jy1tLRk8Vxd37r4RkzrOVJjvydq9L\u002B9HMrkIzG3U3dTKuxXNupNLeJq2i7pvJRmXV\u002BK7DMx4d6eoFVU3Gp0J2G3bZzkaYe6YH8S3Y3/Q8Bv/swBV8Rtel0AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-28T06:52:29.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "courseForm.html",
+              "DocumentMoniker": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Courses\\courseForm.html",
+              "RelativeDocumentMoniker": "templates\\Courses\\courseForm.html",
+              "ToolTip": "C:\\Users\\abish\\source\\repos\\Startup_launchpad_admin\\templates\\Courses\\courseForm.html",
+              "RelativeToolTip": "templates\\Courses\\courseForm.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-18T10:25:08.608Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Cost Category Master</h2>
+<br />
+<br />
+<!-- Alert Box -->
+<div id="alert-box" class="alert alert-danger" style="display:none;" role="alert"></div>
+
+<form id="category-form" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+    {% csrf_token %}
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Category Information</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- First Row -->
+                    <div class="col-md-12" style="margin-bottom:20px">
+                        <label class="form-label" for="category_name">Category Name</label>
+                        <input class="form-control"
+                               id="category_name"
+                               name="category_name"
+                               type="text"
+                               placeholder="Enter category name"
+                               maxlength="100"
+                               pattern="^[A-Za-z .]+$"
+                               required />
+                    </div>
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="category-image-box">Category Image (Box View)</label>
+                        <input class="form-control"
+                               id="category-image-box"
+                               name="category_image_box"
+                               type="file"
+                               accept="image/*"
+                               onchange="validateFileSize(this, 2)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <button class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+    </div>
+</form>
+
+<!-- Display the Issue Types in a Table -->
+<h4 style="margin-top:20px;">Existing Category Name</h4>
+<table class="table table-bordered" style="margin-top: 20px;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Category Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for categroy_names in categroy_name %}
+        <tr>
+            <td>{{ categroy_names.id }}</td>
+            <td>{{ categroy_names.categroy_name }}</td>
+            <td>
+                <!-- Delete Button -->
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="delete" value="{{ categroy_names.id }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    function validateForm() {
+        let alertBox = document.getElementById('alert-box');
+        alertBox.style.display = 'none';
+        alertBox.innerHTML = '';
+
+        let categoryName = document.getElementById('category_name').value.trim();
+        let categoryImage = document.getElementById('category-image-box').files.length;
+
+        if (!categoryName) {
+            alertBox.style.display = 'block';
+            alertBox.innerHTML = 'Please enter a category name.';
+            return false;
+        }
+
+        if (categoryImage === 0) {
+            alertBox.style.display = 'block';
+            alertBox.innerHTML = 'Please upload a category image.';
+            return false;
+        }
+
+        return true;
+    }
+
+    function validateFileSize(input, maxSizeMB) {
+        const file = input.files[0];
+        if (file && file.size > maxSizeMB * 1024 * 1024) {
+            alert(`File size exceeds ${maxSizeMB} MB. Please upload a smaller file.`);
+            input.value = ''; // Clear the file input
+        }
+    }
+</script>
+
+{% endblock %}

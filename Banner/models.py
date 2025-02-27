@@ -1,0 +1,25 @@
+from django.db import models
+
+# Create your models here.
+class Banner(models.Model):
+    banner1 = models.BinaryField(null=True, blank=True)
+    banner2 = models.BinaryField(null=True, blank=True)
+    banner3 = models.BinaryField(null=True, blank=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'collegebanner'
+
+    def __str__(self):
+        return f"Banner {self.id} - {self.uploaded_at}"
+
+class HomeImage(models.Model):
+    open_image = models.BinaryField(null=True,blank=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        db_table = 'homeimage'
+
+    def __str__(self):
+        return f"Banner {self.id} - {self.uploaded_at}"
+
+    

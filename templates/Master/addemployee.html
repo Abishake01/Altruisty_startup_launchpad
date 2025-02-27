@@ -1,0 +1,429 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Add Employee</h2>
+<br />
+<br />
+<style>
+    .card.height-equal {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .row.g-3 {
+        flex: 1; /* Ensures content fills available space proportionally */
+    }
+</style>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Personal Information</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <!-- First Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="employee-name">Employee Name</label>
+                        <input class="form-control"
+                               id="employee-name"
+                               name="employee_name"
+                               type="text"
+                               placeholder="Name"
+                               aria-label="Name"
+                               maxlength="50"
+                               pattern="^[A-Za-z .]+$"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="dob">Date of Birth</label>
+                        <input class="form-control"
+                               id="dob"
+                               name="dob"
+                               type="date"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="gender">Gender</label>
+                        <select class="form-select"
+                                id="gender"
+                                name="gender"
+                                required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Second Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="father-husband-name">Father/Husband's Name</label>
+                        <input class="form-control"
+                               id="father-husband-name"
+                               name="father_husband_name"
+                               type="text"
+                               placeholder="Father/Husband's Name"
+                               aria-label="Father/Husband's Name"
+                               maxlength="50"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="marital-status">Marital Status</label>
+                        <select class="form-select"
+                                id="marital-status"
+                                name="marital_status"
+                                required>
+                            <option value="" disabled selected>Select Marital Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="department">Department</label>
+                        <select class="form-select"
+                                id="department"
+                                name="department"
+                                required>
+                            <option value="" disabled selected>Select Department</option>
+                            
+                            {% for department in departments %}
+                            <option value="{{department.name}}">{{department.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Third Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="designation">Designation</label>
+                        <select class="form-select"
+                                id="designation"
+                                name="designation"
+                                required>
+                            <option value="" disabled selected>Select Designation</option>
+                            {% for designation in designations %}
+                            <option value="{{designation.name}}">{{designation.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="employee-type">Employee Type</label>
+                        <select class="form-select"
+                                id="employee-type"
+                                name="employee_type"
+                                required>
+                            <option value="" disabled selected>Select Employee Type</option>
+                            {% for employee_type in employee_types %}
+                            <option value="{{employee_type.name}}">{{employee_type.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="aadhar-number">Aadhar Number</label>
+                        <input class="form-control"
+                               id="aadhar-number"
+                               name="aadhar_number"
+                               type="text"
+                               placeholder="Aadhar Number"
+                               aria-label="Aadhar Number"
+                               maxlength="12"
+                               pattern="[0-9]{12}"
+                               title="Aadhar should be a 12-digit number"
+                               required />
+                    </div>
+
+                    <!-- Fourth Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="pan-number">PAN Number</label>
+                        <input class="form-control"
+                               id="pan-number"
+                               name="pan_number"
+                               type="text"
+                               placeholder="PAN Number"
+                               aria-label="PAN Number"
+                               maxlength="10"
+                               pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                               title="PAN should be in the format: 5 uppercase letters, 4 digits, and 1 uppercase letter (e.g., ABCDE1234F)"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="uan-number">UAN Number (Optional)</label>
+                        <input class="form-control"
+                               id="uan-number"
+                               name="uan_number"
+                               type="text"
+                               placeholder="UAN Number"
+                               aria-label="UAN Number" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="contact-number">Contact Number</label>
+                        <input class="form-control"
+                               id="contact-number"
+                               name="contact_number"
+                               type="tel"
+                               placeholder="Contact Number"
+                               aria-label="Contact Number"
+                               maxlength="10"
+                               pattern="^\d{10}$"
+                               required />
+                    </div>
+
+                    <!-- Fifth Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="alternate-contact-number">Alternate Contact Number</label>
+                        <input class="form-control"
+                               id="alternate-contact-number"
+                               name="alternate_contact_number"
+                               type="tel"
+                               placeholder="Alternate Contact Number"
+                               aria-label="Alternate Contact Number"
+                               maxlength="10"
+                               pattern="^\d{10}$" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="email">Email ID</label>
+                        <input class="form-control"
+                               id="email"
+                               name="email"
+                               type="email"
+                               placeholder="Email ID"
+                               aria-label="Email"
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="education-qualification">Education Qualification</label>
+                        <input class="form-control"
+                               id="education-qualification"
+                               name="education_qualification"
+                               type="text"
+                               placeholder="Education Qualification"
+                               aria-label="Education Qualification"
+                               required />
+                    </div>
+
+                    <!-- Sixth Row -->
+                    <div class="col-md-4" style="margin-bottom:20px">
+                        <label class="form-label" for="work-experience">Work Experience</label>
+                        <input class="form-control"
+                               id="work-experience"
+                               name="work_experience"
+                               type="text"
+                               placeholder="Work Experience"
+                               aria-label="Work Experience"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="date-of-join">Date of Join</label>
+                        <input class="form-control"
+                               id="date-of-join"
+                               name="date_of_join"
+                               type="date"
+                               required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="upload-photo">Upload Photo</label>
+                        <input class="form-control"
+                               id="upload-photo"
+                               name="upload_photo"
+                               type="file"
+                               accept="image/*"
+                               required />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row" style="margin-top: 20px;">
+        <!-- Address Information Section -->
+        <div class="col-md-6">
+            <div class="card height-equal">
+                <div class="card-header pb-0">
+                    <h4 style="margin-bottom: 20px;">Address Information</h4>
+                </div>
+                <div class="card-body custom-input">
+                    <div class="row g-3">
+                        <!-- Address Fields -->
+                        <div class="col-12">
+                            <label class="form-label" for="house-no">House/Flat No</label>
+                            <input class="form-control"
+                                   id="house-no"
+                                   name="house_no"
+                                   type="text"
+                                   placeholder="House or Flat No"
+                                   maxlength="100"
+                                   pattern="^[a-zA-Z ,.-/]+$"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="area-street">Area/Street Name</label>
+                            <input class="form-control"
+                                   id="area-street"
+                                   name="area_street"
+                                   type="text"
+                                   placeholder="Area or Street Name"
+                                   maxlength="100"
+                                   pattern="^[a-zA-Z ,.-/]+$"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="city">City</label>
+                            <input class="form-control"
+                                   id="city"
+                                   name="city"
+                                   type="text"
+                                   placeholder="City"
+                                   maxlength="25"
+                                   pattern="^[a-zA-Z ]+$"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="state">State</label>
+                            <input class="form-control"
+                                   id="state"
+                                   name="state"
+                                   type="text"
+                                   placeholder="State"
+                                   maxlength="25"
+                                   pattern="^[a-zA-Z ]+$"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="country">Country</label>
+                            <input class="form-control"
+                                   id="country"
+                                   name="country"
+                                   type="text"
+                                   placeholder="Country"
+                                   maxlength="25"
+                                   pattern="^[a-zA-Z ]+$"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="pincode">Pincode</label>
+                            <input class="form-control"
+                                   id="pincode"
+                                   name="pincode"
+                                   type="text"
+                                   placeholder="Pincode"
+                                   maxlength="6"
+                                   pattern="^\d{6}$"
+                                   title="Enter a valid 6-digit pincode"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="card height-equal">
+                <div class="card-header pb-0">
+                    <h4 style="margin-bottom: 20px;">Bank Information</h4>
+                </div>
+                <div class="card-body custom-input">
+                    <div class="row g-3">
+                        <!-- Bank Fields -->
+                        <div class="col-12">
+                            <label class="form-label" for="bank-name">Bank Name</label>
+                            <input class="form-control"
+                                   id="bank-name"
+                                   name="bank_name"
+                                   type="text"
+                                   placeholder="Bank Name"
+                                   maxlength="100"
+                                   pattern="^[a-zA-Z ,.-]+$"
+                                   title="Only letters and basic characters (,.-) are allowed"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="branch-name">Branch Name</label>
+                            <input class="form-control"
+                                   id="branch-name"
+                                   name="branch_name"
+                                   type="text"
+                                   placeholder="Branch Name"
+                                   maxlength="100"
+                                   pattern="^[a-zA-Z ,.-]+$"
+                                   title="Only letters and basic characters (,.-) are allowed"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="ifsc-code">IFSC Code</label>
+                            <input class="form-control"
+                                   id="ifsc-code"
+                                   name="ifsc_code"
+                                   type="text"
+                                   placeholder="IFSC Code"
+                                   maxlength="11"
+                                   pattern="^[A-Z]{4}0[A-Z0-9]{6}$"
+                                   title="Enter a valid IFSC code (e.g., ABCD0123456)"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="micr-code">MICR Code</label>
+                            <input class="form-control"
+                                   id="micr-code"
+                                   name="micr_code"
+                                   type="text"
+                                   placeholder="MICR Code"
+                                   maxlength="9"
+                                   pattern="^[0-9]{9}$"
+                                   title="Enter a valid 9-digit MICR code"
+                                   required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="account-number">Account Number</label>
+                            <input class="form-control"
+                                   id="account-number"
+                                   name="account_number"
+                                   type="text"
+                                   placeholder="Account Number"
+                                   maxlength="18"
+                                   pattern="^[0-9]{9,18}$"
+                                   title="Account Number should be 9 to 18 digits long"
+                                   required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Upload Section -->
+
+
+
+        <div class="submit-form" style="margin-top:0;padding-top:0">
+            <div class="submit" style="text-align:right; margin-right: 100px">
+                <button class="btn btn-primary" type="submit">Submit Form</button>
+            </div>
+        </div>
+
+</form>
+
+
+
+<script>
+
+    function validateFileSize(input, maxSizeMB) {
+        const file = input.files[0];
+        if (file && file.size > maxSizeMB * 1024 * 1024) {
+            alert(`File size exceeds the maximum limit of ${maxSizeMB} MB.`);
+            input.value = ""; // Reset the input
+        }
+    }
+</script>
+
+
+{% endblock %}

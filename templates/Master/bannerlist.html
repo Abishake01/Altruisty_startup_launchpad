@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+ 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner List</title>
+</head>
+<body>
+    <h1>Banner List</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Banner 1</th>
+                <th>Banner 2</th>
+                <th>Banner 3</th>
+                 
+            </tr>
+        </thead>
+        <tbody>
+            {% for banner in banners %}
+            <tr> 
+                <td>
+                    {% if banner.banner1 %}
+                    <img src="data:image/jpeg;base64,{{ banner.banner1|to_base64 }}" alt="banner1" width="100">
+                    {% else %}
+                    No Image
+                    {% endif %}
+                </td>
+                <td>
+                    {% if banner.banner2 %}
+                    <img src="data:image/jpeg;base64,{{ banner.banner2|to_base64 }}" alt="banner2" width="100">
+                    {% else %}
+                    No Image
+                    {% endif %}
+                </td>
+                <td>
+                    {% if banner.banner3 %}
+                    <img src="data:image/jpeg;base64,{{ banner.banner3|to_base64 }}" alt="banner3" width="100">
+                    {% else %}
+                    No Image
+                    {% endif %}
+                </td>
+            
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

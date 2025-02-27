@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load custom_filters %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor List</title>
+</head>
+<body>
+    <h1>Instructor List</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Current Status</th>
+                <th>Pan Number</th>
+                <th>Aadhar Number</th>
+                <th>EPF Number</th>
+                <th>Business Name</th>
+                <th>Business Type</th>
+                <th>Business Address</th>
+                <th>Product Name</th>
+                <th>Institution Name</th>
+                <th>Degree</th>
+                <th>Percentage</th>
+                <th>Passed Out Year</th>
+                <th>Bank Name</th>
+                <th>Branch Name</th>
+                <th>IFSC Code</th>
+                <th>MICR Code</th>
+                <th>Account Number</th>
+                <th>Profile Photo</th>
+                <th>Resume</th>
+                <th>Pan Card</th>
+                <th>Aadhar Card</th>
+                <th>Bank Passbook</th>
+                <th>Attribute 1</th>
+                <th>Attribute 2</th>
+                <th>Attribute 3</th>
+                <th>Attribute 4</th>
+                <th>Attribute 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for instructor in instructors %}
+            <tr>
+                <td>{{ instructor.name }}</td>
+                <td>{{ instructor.dob }}</td>
+                <td>{{ instructor.email }}</td>
+                <td>{{ instructor.phone_number }}</td>
+                <td>{{ instructor.current_status }}</td>
+                <td>{{ instructor.pan_number }}</td>
+                <td>{{ instructor.aadhar_number }}</td>
+                <td>{{ instructor.epf_number }}</td>
+                <td>{{ instructor.business_name }}</td>
+                <td>{{ instructor.business_type }}</td>
+                <td>{{ instructor.business_address }}</td>
+                <td>{{ instructor.product_name }}</td>
+                <td>{{ instructor.institution_name }}</td>
+                <td>{{ instructor.degree }}</td>
+                <td>{{ instructor.percentage }}</td>
+                <td>{{ instructor.passed_out_year }}</td>
+                <td>{{ instructor.bank_name }}</td>
+                <td>{{ instructor.branch_name }}</td>
+                <td>{{ instructor.ifsc_code }}</td>
+                <td>{{ instructor.micr_code }}</td>
+                <td>{{ instructor.account_number }}</td>
+                <td>
+                    {% if instructor.profile_photo %}
+                    <img src="data:image/jpeg;base64,{{ instructor.profile_photo|to_base64 }}" alt="Profile Photo" width="100">
+                    {% else %}
+                    No Image
+                    {% endif %}
+                </td>
+                <td>
+                    {% if instructor.resume %}
+                    <a href="data:application/pdf;base64,{{ instructor.resume|to_base64 }}" download="resume.pdf">Download Resume</a>
+                    {% else %}
+                    No Resume
+                    {% endif %}
+                </td>
+                <td>
+                    {% if instructor.pan_card %}
+                    <img src="data:image/jpeg;base64,{{ instructor.pan_card|to_base64 }}" alt="Pan Card" width="100">
+                    {% else %}
+                    No Pan Card
+                    {% endif %}
+                </td>
+                <td>
+                    {% if instructor.aadhar_card %}
+                    <img src="data:image/jpeg;base64,{{ instructor.aadhar_card|to_base64 }}" alt="Aadhar Card" width="100">
+                    {% else %}
+                    No Aadhar Card
+                    {% endif %}
+                </td>
+                <td>
+                    {% if instructor.bank_passbook %}
+                    <img src="data:image/jpeg;base64,{{ instructor.bank_passbook|to_base64 }}" alt="Bank Passbook" width="100">
+                    {% else %}
+                    No Bank Passbook
+                    {% endif %}
+                </td>
+
+                <td>{{ instructor.attribute1 }}</td>
+                <td>{{ instructor.attribute2 }}</td>
+                <td>{{ instructor.attribute3 }}</td>
+                <td>{{ instructor.attribute4 }}</td>
+                <td>{{ instructor.attribute5 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

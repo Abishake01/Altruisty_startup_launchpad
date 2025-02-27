@@ -1,0 +1,176 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<div class="card-body">
+    <div class="table-responsive custom-scrollbar">
+        <h1>Attendance Management</h1>
+
+        <!-- Section to add new attendance -->
+        <h2>Mark Attendance</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div style="margin-bottom: 15px;">
+                <label for="id_date">Date:</label>
+                {{ form.date }}
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="id_student_name">Student Name:</label>
+                {{ form.student_name }}
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="id_status">Status:</label>
+                {{ form.status }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Search Bar for filtering -->
+        <div class="search-container" style="margin: 20px 0;">
+            <label for="searchInput">Search by Date or Student Name:</label>
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search...">
+        </div>
+
+        <!-- Section to display all students' attendance records -->
+        <h2>Student Attendance</h2>
+        <table class="display" id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in attendance_data %}
+                <tr>
+                    <td>{{ record.student.name }}</td>
+                    <td>{{ record.date }}</td>
+                    <td>
+                        {% if record.is_present %}
+                        <span class="present" onclick="toggleAttendance(this)">✔️</span>
+                        {% else %}
+                        <span class="absent" onclick="toggleAttendance(this)">❌</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Save button -->
+    <button id="saveButton" class="btn btn-success save-btn" onclick="saveChanges()">Save</button>
+</div>
+
+<style>
+    .card-body {
+        padding: 20px;
+        background-color: #f8f9fa;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .display {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    thead th {
+        background-color: #343a40;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    tbody td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .present {
+        color: green;
+        cursor: pointer;
+    }
+
+    .absent {
+        color: red;
+        cursor: pointer;
+    }
+
+    .save-btn {
+        margin-top: 10px;
+        display: none;
+    }
+
+    .search-container input {
+        width: 200px;
+        padding: 8px;
+        margin-right: 10px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+</style>
+
+<script>
+    function toggleAttendance(element) {
+        if (element.classList.contains("present")) {
+            element.classList.remove("present");
+            element.classList.add("absent");
+            element.innerText = "❌";
+        } else {
+            element.classList.remove("absent");
+            element.classList.add("present");
+            element.innerText = "✔️";
+        }
+        document.getElementById("saveButton").style.display = "inline-block";
+    }
+
+    function saveChanges() {
+        alert("Changes saved successfully!");
+        document.getElementById("saveButton").style.display = "none";
+    }
+
+    function searchTable() {
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        const rows = document.getElementById("attendanceTable").getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName("td");
+            const studentName = cells[0].textContent.toLowerCase();
+
+            if (studentName.includes(searchInput)) {
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+    }
+</script>
+{% endblock %}
