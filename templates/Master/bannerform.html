@@ -1,14 +1,12 @@
  
 {% block content %}
 <h2>Banner form</h2>
-  
-{% extends 'layout2.html' %}
-{% block content %}
+ 
 <h2>Course Information</h2>
 <br />
 <br />
 <form id="course-form">
-    
+    {% csrf_token %}
     <!-- Course Details Card -->
     <div class="col-xl-12" style="height: auto;">
         <div class="card height-equal">
@@ -59,75 +57,58 @@
         </div>
     </div>
 </form>
+<p><a href="{% url 'bannerlist' %}">View All Banners</a></p>
 
 <script>
-    async function validateImageDimensions(file, width, height) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                const img = new Image();
-                img.onload = () => {
-                    if (img.width === width && img.height === height) {
-                        resolve(true);
-                    } else {
-                        resolve(false);
-                    }
-                };
-                img.onerror = () => reject('Error loading image');
-                img.src = e.target.result;
-            };
-            reader.onerror = () => reject('Error reading file');
-            reader.readAsDataURL(file);
-        });
-    }
-
     async function submitForm(event) {
-        event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Prevent default form submission
 
-        const requiredWidth = 1587;
-        const requiredHeight = 2245;
+    const file1 = document.getElementById('banner1').files[0];
+    const file2 = document.getElementById('banner2').files[0];
+    const file3 = document.getElementById('banner3').files[0];
 
-        const file1 = document.getElementById('banner1').files[0];
-        const file2 = document.getElementById('banner2').files[0];
-        const file3 = document.getElementById('banner3').files[0];
-
-        // Validate dimensions
-        if (
-            !(await validateImageDimensions(file1, requiredWidth, requiredHeight)) ||
-            !(await validateImageDimensions(file2, requiredWidth, requiredHeight)) ||
-            !(await validateImageDimensions(file3, requiredWidth, requiredHeight))
-        ) {
-            alert(`All images must have dimensions ${requiredWidth}x${requiredHeight}.`);
-            return;
-        }
-
-        const formd = new FormData();
-        formd.append('file1', file1);
-        formd.append('file2', file2);
-        formd.append('file3', file3);
-
-        const url = `http://127.0.0.1:8000/uploadbanner/`;
-
-        try {
-            const response = await fetch(url, {
-                method: "POST",
-                body: formd,
-            });
-
-            if (response.ok) {
-                alert('Uploaded successfully!');
-            } else {
-                alert('Error uploading. Please try again.');
-            }
-        } catch (err) {
-            console.error(err);
-            alert('An error occurred while submitting the form.');
-        }
+    if (!file1 || !file2 || !file3) {
+        alert("Please upload all three banner images.");
+        return;
     }
 
-    // Attach the submit event to the form
-    document.getElementById('course-form').addEventListener('submit', submitForm);
+    const formd = new FormData();
+    formd.append('file1', file1);
+    formd.append('file2', file2);
+    formd.append('file3', file3);
+
+    // Get CSRF token from the form
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    const url = `http://127.0.0.1:8000/uploadbanner/`;
+
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            body: formd,
+            headers: {
+                'X-CSRFToken': csrftoken  // Add CSRF token in request headers
+            }
+        });
+
+        if (response.ok) {
+            alert('Uploaded successfully!');
+            window.location.reload();  // Reload to reflect changes
+        } else {
+            const errorData = await response.json();
+            alert(`Error uploading: ${errorData.message || "Please try again."}`);
+        }
+    } catch (err) {
+        console.error(err);
+        alert('An error occurred while submitting the form.');
+    }
+}
+
+// Attach the submit event to the form
+document.getElementById('course-form').addEventListener('submit', submitForm);
+
 </script>
+
 
 
 {% endblock %}

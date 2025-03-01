@@ -1,11 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>college homeimage</title>
-</head>
-<body>
-    <h1>College home image</h1>
-</body>
-</html>
+{% block content %}
+<h2>Home Image Upload</h2>
+ 
+<form id="home-image-form">
+    <!-- Home Image Card -->
+    <div class="col-xl-12" style="height: auto;">
+        <div class="card height-equal">
+            <div class="card-header pb-0">
+                <h4 style="margin-bottom:20px">Upload Home Image</h4>
+            </div>
+            <div class="card-body custom-input">
+                <div class="row g-3">
+                    <div class="col-md-6" style="margin-bottom:20px">
+                        <label class="form-label" for="open_image">Home Image</label>
+                        <input class="form-control"
+                               id="open_image"
+                               type="file"
+                               placeholder="Upload home image"
+                               required />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="submit-form" style="margin-top:0;padding-top:0">
+        <div class="submit" style="text-align:right; margin-right: 100px">
+            <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
+    </div>
+</form>
+<p><a href="{% url 'homeimage_list' %}">View All Banners</a></p>
+
+<script>
+    async function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const fileInput = document.getElementById('open_image');
+        const file = fileInput.files[0];
+
+        if (!file) {
+            alert('Please select an image.');
+            return;
+        }
+
+        // Create FormData and append the image
+        const formData = new FormData();
+        formData.append('open_image', file);
+
+        const url = `http://127.0.0.1:8000/homepage_uplod/`;
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: formData,
+            });
+
+            if (response.ok) {
+                alert('Uploaded successfully!');
+                fileInput.value = ''; // Clear input after successful upload
+            } else {
+                alert('Error uploading. Please try again.');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('An error occurred while submitting the form.');
+        }
+    }
+
+    // Ensure the event listener is attached when the page loads
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('home-image-form').addEventListener('submit', submitForm);
+    });
+</script>
+
+
+{% endblock %}

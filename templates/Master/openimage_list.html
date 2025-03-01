@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>colleg home image list</title>
+    <title>Home Image List</title>
 </head>
 <body>
-    <h1>College home image List</h1>
+
+    {% load image_filters %}
+    
+    <h1>Home Image List</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Home Image</th>
+                <th>Uploaded At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for image in open_images %}
+            <tr>
+                <td>
+                    {% if image.open_image %}
+                    <img src="data:image/jpeg;base64,{{ image.open_image|to_base64 }}" alt="Home Image" width="200">
+                    {% else %}
+                    No Image
+                    {% endif %}
+                </td>
+                <td>{{ image.uploaded_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

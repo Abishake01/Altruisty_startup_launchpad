@@ -4,10 +4,9 @@ from .models import Banner, HomeImage
 class BannerForm(forms.ModelForm):
     class Meta:
         model = Banner
-        fields = '__all__'
+        fields = ['banner1', 'banner2', 'banner3']
         
-class HomeForm(forms.ModelForm):
+class HomeImageForm(forms.ModelForm):
     class Meta:
         model = HomeImage
-        fields = '__all__'
-
+        fields = ['open_image']
