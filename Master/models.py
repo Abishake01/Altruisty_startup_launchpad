@@ -231,16 +231,16 @@ class commonquestionanswer(models.Model):
 
 
 class bannerupload(models.Model):
-    banner1 = models.FileField(upload_to='banner/', null=True, blank=True)
-    banner2= models.FileField(upload_to='banner/', null=True, blank=True)
-    banner3 = models.FileField(upload_to='banner/', null=True, blank=True)
+    banner1 = models.BinaryField( null=True, blank=True)
+    banner2= models.BinaryField( null=True, blank=True)
+    banner3 = models.BinaryField( null=True, blank=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
     
-
-    def __str__(self):
-        return self.id
     class Meta:
         db_table = 'internbanner'
-
+        
+    def __str__(self):
+        return f"Banner {self.id} - {self.uploaded_at}"
 
 class collegeRegistartion(models.Model):
     user_id=models.CharField(max_length=30,null=True,blank=True)
