@@ -9,4 +9,4 @@ class BannerForm(forms.ModelForm):
 class HomeImageForm(forms.ModelForm):
     class Meta:
         model = HomeImage
-        fields = ['open_image']
+        fields = ['college_home','inetern_home']

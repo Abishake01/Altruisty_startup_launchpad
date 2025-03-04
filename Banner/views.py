@@ -45,10 +45,12 @@ def homeimage_upload(request):
         try:
             logger.info(f"Files received: {request.FILES}")
             
-            open_image = request.FILES.get('open_image').read() if 'open_image' in request.FILES else None
+            college_home = request.FILES.get('college_home').read() if 'college_home' in request.FILES else None
+            intern_home = request.FILES.get('intern_home').read() if 'intern_home' in request.FILES else None
             
             home_image = HomeImage(
-                open_image=open_image
+                intern_home=intern_home,
+                college_home=college_home
             )
             home_image.save()
             return JsonResponse({'status': 'success'})

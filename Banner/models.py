@@ -13,7 +13,8 @@ class Banner(models.Model):
         return f"Banner {self.id} - {self.uploaded_at}"
 
 class HomeImage(models.Model):
-    open_image = models.BinaryField(null=True, blank=True)
+    college_home = models.BinaryField(null=True, blank=True)
+    intern_home = models.BinaryField(null=True, blank=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
