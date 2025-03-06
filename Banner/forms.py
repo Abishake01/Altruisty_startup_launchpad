@@ -1,5 +1,5 @@
 from django import forms
-from .models import Banner, HomeImage
+from .models import Banner, HomeImage , Events_update
 
 class BannerForm(forms.ModelForm):
     class Meta:
@@ -9,4 +9,9 @@ class BannerForm(forms.ModelForm):
 class HomeImageForm(forms.ModelForm):
     class Meta:
         model = HomeImage
-        fields = ['college_home','inetern_home']
+        fields = ['college_home','intern_home']
+        
+class EventsForm(forms.ModelForm):
+    class Meta:
+        model = Events_update
+        fields = ['events']

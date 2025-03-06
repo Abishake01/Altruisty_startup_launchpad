@@ -1,8 +1,8 @@
  
 {% block content %}
-<h2>Banner form</h2>
+<h2>Event Images Upload</h2>
  
-<h2>Course Information</h2>
+<h2>Images</h2>
 <br />
 <br />
 <form id="course-form" enctype="multipart/form-data">
@@ -15,16 +15,8 @@
             <div class="card-body custom-input">
                 <div class="row g-3">
                     <div class="col-md-4">
-                        <label class="form-label">Banner 1</label>
-                        <input class="form-control" id="banner1" type="file" required />
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label">Banner 2</label>
-                        <input class="form-control" id="banner2" type="file" required />
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label">Banner 3</label>
-                        <input class="form-control" id="banner3" type="file" required />
+                        <label class="form-label">Events Upload</label>
+                        <input class="form-control" id="updates" type="file" required />
                     </div>
                 </div>
             </div>
@@ -35,7 +27,7 @@
     </div>
 </form>
 
-<p><a href="{% url 'bannerlist' %}">View All Banners</a></p>
+<p><a href="{% url 'events_list' %}">View All Events</a></p>
 
 <script>
     async function submitForm(event) {
@@ -47,12 +39,11 @@
     submitBtn.value = "Uploading...";
     submitBtn.disabled = true;
     
-    const file1 = document.getElementById('banner1').files[0];
-    const file2 = document.getElementById('banner2').files[0];
-    const file3 = document.getElementById('banner3').files[0];
+    const file1 = document.getElementById('updates').files[0];
+ 
     
-    if (!file1 || !file2 || !file3) {
-        alert("Please upload all three banner images.");
+    if (!file1) {
+        alert("Please upload  event images.");
         submitBtn.value = originalBtnText;
         submitBtn.disabled = false;
         return;
@@ -60,11 +51,10 @@
     
     const formData = new FormData();
     formData.append('file1', file1);
-    formData.append('file2', file2);
-    formData.append('file3', file3);
+   
     
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-    const url = `http://127.0.0.1:8000/uploadbanner/`;
+    const url = `http://127.0.0.1:8000/event_upload/`;
     
     try {
         console.log("Submitting form data...");
@@ -92,8 +82,8 @@
         }
         
         if (response.ok) {
-            alert('Banners uploaded successfully!');
-            window.location.href = "{% url 'bannerlist' %}";
+            alert('Event Image uploaded successfully!');
+            window.location.href = "{% url 'events_list' %}";
         } else {
             const errorMsg = responseData.message || "An unknown error occurred";
             alert(`Error: ${errorMsg}`);

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Image List</title>
+    <title>Event Image List</title>
     <style>
         table {
             border-collapse: collapse;
@@ -29,41 +29,34 @@
     </style>
 </head>
 <body>
-    <h1>Home Image List</h1>
+    <h1>Event Image List</h1>
     
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>College Home Image</th>
-                <th>Intern Home Image</th>
+                <th>Event Image</th>
                 <th>Uploaded At</th>
             </tr>
         </thead>
         <tbody>
-            {% for image in open_images %}
+            
+        {% for event in events_list %}
             <tr>
                 <td>{{ image.id }}</td>
                 <td>
-                    {% if image.college_home %}
-                    <img src="data:image/jpeg;base64,{{ image.college_home|to_base64 }}" alt="College Home Image" width="200">
+                    {% if image.event %}
+                    <img src=" {{ event.events_base64 }}" alt="Event Image" width="200">
                     {% else %}
                     No College Image
                     {% endif %}
                 </td>
-                <td>
-                    {% if image.intern_home %}
-                    <img src="data:image/jpeg;base64,{{ image.intern_home|to_base64 }}" alt="Intern Home Image" width="200">
-                    {% else %}
-                    No Intern Image
-                    {% endif %}
-                </td>
-                <td>{{ image.uploaded_at }}</td>
+                
             </tr>
             {% endfor %}
         </tbody>
     </table>
     
-    <p><a href="{% url 'homeimage_upload' %}">Upload New Images</a></p>
+    <p><a href="{% url 'events_upload' %}">Upload New Images</a></p>
 </body>
 </html>

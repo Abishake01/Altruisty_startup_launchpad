@@ -1,7 +1,8 @@
 {% block content %}
 <h2>Home Image Upload</h2>
- 
+
 <form id="home-image-form">
+    {% csrf_token %}
     <!-- Home Image Card -->
     <div class="col-xl-12" style="height: auto;">
         <div class="card height-equal">
@@ -11,19 +12,19 @@
             <div class="card-body custom-input">
                 <div class="row g-3">
                     <div class="col-md-6" style="margin-bottom:20px">
-                        <label class="form-label" for="open_image">college home Image</label>
+                        <label class="form-label" for="college_home">College Home Image</label>
                         <input class="form-control"
-                               id="open_image"
+                               id="college_home"
                                type="file"
-                               placeholder="Upload home image"
+                               placeholder="Upload college image"
                                required />
                     </div>
                     <div class="col-md-6" style="margin-bottom:20px">
-                        <label class="form-label" for="open_image">intern home Image</label>
+                        <label class="form-label" for="intern_home">Intern Home Image</label>
                         <input class="form-control"
-                               id="open_image"
+                               id="intern_home"
                                type="file"
-                               placeholder="Upload home image"
+                               placeholder="Upload intern image"
                                required />
                     </div>
                 </div>
@@ -38,49 +39,89 @@
         </div>
     </div>
 </form>
-<p><a href="{% url 'homeimage_list' %}">View All Banners</a></p>
+<p><a href="{% url 'homeimage_list' %}">View All Home Images</a></p>
 
 <script>
     async function submitForm(event) {
         event.preventDefault(); // Prevent default form submission
 
-        const fileInput = document.getElementById('open_image');
-        const file = fileInput.files[0];
+        // Get both file inputs
+        const collegeHomeInput = document.getElementById('college_home');
+        const internHomeInput = document.getElementById('intern_home');
+        
+        const collegeHomeFile = collegeHomeInput.files[0];
+        const internHomeFile = internHomeInput.files[0];
 
-        if (!file) {
-            alert('Please select an image.');
+        if (!collegeHomeFile || !internHomeFile) {
+            alert('Please select both image files.');
             return;
         }
 
-        // Create FormData and append the image
-        const formData = new FormData();
-        formData.append('open_image', file);
+        // Show loading state
+        const submitBtn = event.target.querySelector('[type="submit"]');
+        const originalBtnText = submitBtn.value;
+        submitBtn.value = "Uploading...";
+        submitBtn.disabled = true;
 
-        const url = `http://127.0.0.1:8000/homepage_uplod/`;
+        // Create FormData and append both images
+        const formData = new FormData();
+        formData.append('college_home', collegeHomeFile);
+        formData.append('intern_home', internHomeFile);
+
+        // Get the CSRF token
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        
+        // Use a relative URL instead of hardcoded localhost URL
+        const url = "/homeimage_upload/";  // Adjust this to match your URL pattern
 
         try {
+            console.log("Submitting home image form...");
+            
             const response = await fetch(url, {
                 method: "POST",
                 body: formData,
+                headers: {
+                    'X-CSRFToken': csrftoken
+                },
+                credentials: 'same-origin' // Include cookies
             });
-
+            
+            console.log("Response status:", response.status);
+            
+            let responseData;
+            try {
+                responseData = await response.json();
+                console.log("Response data:", responseData);
+            } catch (e) {
+                const text = await response.text();
+                console.log("Response text:", text);
+                responseData = { message: "Could not parse server response" };
+            }
+            
             if (response.ok) {
-                alert('Uploaded successfully!');
-                fileInput.value = ''; // Clear input after successful upload
+                alert('Home images uploaded successfully!');
+                // Clear the form inputs
+                collegeHomeInput.value = '';
+                internHomeInput.value = '';
+                // Redirect to the list page
+                window.location.href = "{% url 'homeimage_list' %}";
             } else {
-                alert('Error uploading. Please try again.');
+                const errorMsg = responseData.message || "An unknown error occurred";
+                alert(`Error: ${errorMsg}`);
             }
         } catch (err) {
-            console.error(err);
-            alert('An error occurred while submitting the form.');
+            console.error("Fetch error:", err);
+            alert('Network error occurred. Please check your connection and try again.');
+        } finally {
+            // Reset button state
+            submitBtn.value = originalBtnText;
+            submitBtn.disabled = false;
         }
     }
 
-    // Ensure the event listener is attached when the page loads
+    // Attach event listener when the page loads
     document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('home-image-form').addEventListener('submit', submitForm);
     });
 </script>
-
-
 {% endblock %}

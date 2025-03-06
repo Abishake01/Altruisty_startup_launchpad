@@ -517,3 +517,2966 @@ HTTP/2 support not enabled (install the http2 and tls Twisted extras)
 Configuring endpoint tcp:port=8000:interface=0.0.0.0
 Listening on TCP address 0.0.0.0:8000
 Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 53608]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 53608]
+HTTP close for ['127.0.0.1', 53608]
+HTTP response complete for ['127.0.0.1', 53608]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 54448]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'GET' request for ['127.0.0.1', 54448]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'GET' request for ['127.0.0.1', 54448]
+Not Found: /favicon.ico
+HTTP 404 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'GET' request for ['127.0.0.1', 54448]
+HTTP 301 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'GET' request for ['127.0.0.1', 54448]
+Error in banner_list: (1054, "Unknown column 'collegebanner.uploaded_at' in 'field list'")
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'collegebanner.uploaded_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 36, in banner_list
+    return render(request, 'Master/bannerlist.html', {'banners': banners})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'collegebanner.uploaded_at' in 'field list'")
+
+HTTP 200 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'GET' request for ['127.0.0.1', 54448]
+HTTP 200 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'GET' request for ['127.0.0.1', 54448]
+HTTP 200 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'GET' request for ['127.0.0.1', 54448]
+HTTP 200 response started for ['127.0.0.1', 54448]
+HTTP close for ['127.0.0.1', 54448]
+HTTP response complete for ['127.0.0.1', 54448]
+HTTP b'POST' request for ['127.0.0.1', 56149]
+Not Found: /homepage_uplod/
+HTTP 404 response started for ['127.0.0.1', 56149]
+HTTP close for ['127.0.0.1', 56149]
+HTTP response complete for ['127.0.0.1', 56149]
+HTTP b'GET' request for ['127.0.0.1', 56742]
+HTTP 200 response started for ['127.0.0.1', 56742]
+HTTP close for ['127.0.0.1', 56742]
+HTTP response complete for ['127.0.0.1', 56742]
+HTTP b'GET' request for ['127.0.0.1', 56742]
+HTTP 200 response started for ['127.0.0.1', 56742]
+HTTP close for ['127.0.0.1', 56742]
+HTTP response complete for ['127.0.0.1', 56742]
+HTTP b'GET' request for ['127.0.0.1', 56742]
+Error in banner_list: (1054, "Unknown column 'collegebanner.uploaded_at' in 'field list'")
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'collegebanner.uploaded_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 36, in banner_list
+    return render(request, 'Master/bannerlist.html', {'banners': banners})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'collegebanner.uploaded_at' in 'field list'")
+
+HTTP 200 response started for ['127.0.0.1', 56742]
+HTTP close for ['127.0.0.1', 56742]
+HTTP response complete for ['127.0.0.1', 56742]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 57918]
+HTTP 200 response started for ['127.0.0.1', 57918]
+HTTP close for ['127.0.0.1', 57918]
+HTTP response complete for ['127.0.0.1', 57918]
+HTTP b'GET' request for ['127.0.0.1', 57918]
+HTTP 200 response started for ['127.0.0.1', 57918]
+HTTP close for ['127.0.0.1', 57918]
+HTTP response complete for ['127.0.0.1', 57918]
+HTTP b'OPTIONS' request for ['127.0.0.1', 57932]
+HTTP 200 response started for ['127.0.0.1', 57932]
+HTTP close for ['127.0.0.1', 57932]
+HTTP response complete for ['127.0.0.1', 57932]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 57952]
+HTTP 200 response started for ['127.0.0.1', 57952]
+HTTP close for ['127.0.0.1', 57952]
+HTTP response complete for ['127.0.0.1', 57952]
+HTTP b'OPTIONS' request for ['127.0.0.1', 57957]
+HTTP 200 response started for ['127.0.0.1', 57957]
+HTTP close for ['127.0.0.1', 57957]
+HTTP response complete for ['127.0.0.1', 57957]
+HTTP b'GET' request for ['127.0.0.1', 57952]
+HTTP 200 response started for ['127.0.0.1', 57952]
+HTTP close for ['127.0.0.1', 57952]
+HTTP response complete for ['127.0.0.1', 57952]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 58028]
+Exception inside application: name 'csrf_exempt' is not defined
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 235, in _get_response_async
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 145, in __acall__
+    response = response or await self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\asgi.py", line 162, in __call__
+    await self.handle(scope, receive, send)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\asgi.py", line 208, in handle
+    task.result()
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\asgi.py", line 185, in process_request
+    response = await self.run_get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\asgi.py", line 244, in run_get_response
+    response = await self.get_response_async(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 162, in get_response_async
+    response = await self._middleware_chain(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 44, in inner
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 520, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\startup_launchpad_admin\urls.py", line 31, in <module>
+    path('',include('Banner.urls')),
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 45, in <module>
+    @csrf_exempt  # For debugging only - remove in production
+     ^^^^^^^^^^^
+NameError: name 'csrf_exempt' is not defined
+HTTP 500 response started for ['127.0.0.1', 58028]
+HTTP close for ['127.0.0.1', 58028]
+HTTP response complete for ['127.0.0.1', 58028]
+HTTP b'GET' request for ['127.0.0.1', 58058]
+HTTP 200 response started for ['127.0.0.1', 58058]
+HTTP close for ['127.0.0.1', 58058]
+HTTP response complete for ['127.0.0.1', 58058]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58065]
+HTTP 200 response started for ['127.0.0.1', 58065]
+HTTP close for ['127.0.0.1', 58065]
+HTTP response complete for ['127.0.0.1', 58065]
+HTTP b'GET' request for ['127.0.0.1', 58058]
+HTTP 200 response started for ['127.0.0.1', 58058]
+HTTP close for ['127.0.0.1', 58058]
+HTTP response complete for ['127.0.0.1', 58058]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58065]
+HTTP 200 response started for ['127.0.0.1', 58065]
+HTTP close for ['127.0.0.1', 58065]
+HTTP response complete for ['127.0.0.1', 58065]
+HTTP b'GET' request for ['127.0.0.1', 58058]
+HTTP 200 response started for ['127.0.0.1', 58058]
+HTTP close for ['127.0.0.1', 58058]
+HTTP response complete for ['127.0.0.1', 58058]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58065]
+HTTP 200 response started for ['127.0.0.1', 58065]
+HTTP close for ['127.0.0.1', 58065]
+HTTP response complete for ['127.0.0.1', 58065]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 58086]
+HTTP 200 response started for ['127.0.0.1', 58086]
+HTTP close for ['127.0.0.1', 58086]
+HTTP response complete for ['127.0.0.1', 58086]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58091]
+HTTP 200 response started for ['127.0.0.1', 58091]
+HTTP close for ['127.0.0.1', 58091]
+HTTP response complete for ['127.0.0.1', 58091]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 58219]
+HTTP 200 response started for ['127.0.0.1', 58219]
+HTTP close for ['127.0.0.1', 58219]
+HTTP response complete for ['127.0.0.1', 58219]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58226]
+HTTP 200 response started for ['127.0.0.1', 58226]
+HTTP close for ['127.0.0.1', 58226]
+HTTP response complete for ['127.0.0.1', 58226]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 58258]
+HTTP 200 response started for ['127.0.0.1', 58258]
+HTTP close for ['127.0.0.1', 58258]
+HTTP response complete for ['127.0.0.1', 58258]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58270]
+HTTP 200 response started for ['127.0.0.1', 58270]
+HTTP close for ['127.0.0.1', 58270]
+HTTP response complete for ['127.0.0.1', 58270]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 58285]
+HTTP 200 response started for ['127.0.0.1', 58285]
+HTTP close for ['127.0.0.1', 58285]
+HTTP response complete for ['127.0.0.1', 58285]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58292]
+HTTP 200 response started for ['127.0.0.1', 58292]
+HTTP close for ['127.0.0.1', 58292]
+HTTP response complete for ['127.0.0.1', 58292]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'OPTIONS' request for ['127.0.0.1', 58329]
+HTTP 200 response started for ['127.0.0.1', 58329]
+HTTP close for ['127.0.0.1', 58329]
+HTTP response complete for ['127.0.0.1', 58329]
+HTTP b'GET' request for ['127.0.0.1', 58339]
+HTTP 200 response started for ['127.0.0.1', 58339]
+HTTP close for ['127.0.0.1', 58339]
+HTTP response complete for ['127.0.0.1', 58339]
+HTTP b'GET' request for ['127.0.0.1', 58339]
+HTTP 200 response started for ['127.0.0.1', 58339]
+HTTP close for ['127.0.0.1', 58339]
+HTTP response complete for ['127.0.0.1', 58339]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58329]
+HTTP 200 response started for ['127.0.0.1', 58329]
+HTTP close for ['127.0.0.1', 58329]
+HTTP response complete for ['127.0.0.1', 58329]
+HTTP b'GET' request for ['127.0.0.1', 58339]
+HTTP 200 response started for ['127.0.0.1', 58339]
+HTTP close for ['127.0.0.1', 58339]
+HTTP response complete for ['127.0.0.1', 58339]
+HTTP b'GET' request for ['127.0.0.1', 58372]
+HTTP 200 response started for ['127.0.0.1', 58372]
+HTTP close for ['127.0.0.1', 58372]
+HTTP response complete for ['127.0.0.1', 58372]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58391]
+HTTP 200 response started for ['127.0.0.1', 58391]
+HTTP close for ['127.0.0.1', 58391]
+HTTP response complete for ['127.0.0.1', 58391]
+HTTP b'OPTIONS' request for ['127.0.0.1', 58391]
+HTTP 200 response started for ['127.0.0.1', 58391]
+HTTP close for ['127.0.0.1', 58391]
+HTTP response complete for ['127.0.0.1', 58391]
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /vite.svg
+Files received: <MultiValueDict: {'file1': [<InMemoryUploadedFile: WhatsApp Image 2025-02-22 at 11.39.41_f636bfdf.jpg (image/jpeg)>], 'file2': [<InMemoryUploadedFile: avatar-09.jpg (image/jpeg)>], 'file3': [<InMemoryUploadedFile: avatar-11.jpg (image/jpeg)>]}>
+Error in banner_upload: (1366, "Incorrect string value: '\\xFF\\xD8\\xFF\\xE0\\x00\\x10...' for column 'banner1' at row 1")
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect string value: '\\xFF\\xD8\\xFF\\xE0\\x00\\x10...' for column 'banner1' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 35, in banner_upload
+    banner.save()
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xFF\\xD8\\xFF\\xE0\\x00\\x10...' for column 'banner1' at row 1")
+
+Bad Request: /uploadbanner/
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 51742]
+HTTP 200 response started for ['127.0.0.1', 51742]
+HTTP close for ['127.0.0.1', 51742]
+HTTP response complete for ['127.0.0.1', 51742]
+HTTP b'GET' request for ['127.0.0.1', 51742]
+HTTP 200 response started for ['127.0.0.1', 51742]
+HTTP close for ['127.0.0.1', 51742]
+HTTP response complete for ['127.0.0.1', 51742]
+HTTP b'GET' request for ['127.0.0.1', 51742]
+HTTP 200 response started for ['127.0.0.1', 51742]
+HTTP close for ['127.0.0.1', 51742]
+HTTP response complete for ['127.0.0.1', 51742]
+HTTP b'GET' request for ['127.0.0.1', 51742]
+HTTP 200 response started for ['127.0.0.1', 51742]
+HTTP close for ['127.0.0.1', 51742]
+HTTP response complete for ['127.0.0.1', 51742]
+HTTP b'POST' request for ['127.0.0.1', 51742]
+Files received: <MultiValueDict: {'file1': [<InMemoryUploadedFile: converted_image.png (image/png)>], 'file2': [<InMemoryUploadedFile: converted_image (1).png (image/png)>], 'file3': [<InMemoryUploadedFile: avatar-14.png (image/png)>]}>
+Error in banner_upload: (1366, "Incorrect string value: '\\x89PNG\\x0D\\x0A...' for column 'banner1' at row 1")
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect string value: '\\x89PNG\\x0D\\x0A...' for column 'banner1' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 35, in banner_upload
+    banner.save()
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect string value: '\\x89PNG\\x0D\\x0A...' for column 'banner1' at row 1")
+
+Bad Request: /uploadbanner/
+HTTP 400 response started for ['127.0.0.1', 51742]
+HTTP close for ['127.0.0.1', 51742]
+HTTP response complete for ['127.0.0.1', 51742]
+HTTP b'POST' request for ['127.0.0.1', 51994]
+Files received: <MultiValueDict: {'file1': [<InMemoryUploadedFile: converted_image.png (image/png)>], 'file2': [<InMemoryUploadedFile: converted_image (1).png (image/png)>], 'file3': [<InMemoryUploadedFile: avatar-14.png (image/png)>]}>
+Error in banner_upload: (1366, "Incorrect string value: '\\x89PNG\\x0D\\x0A...' for column 'banner1' at row 1")
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect string value: '\\x89PNG\\x0D\\x0A...' for column 'banner1' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 35, in banner_upload
+    banner.save()
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect string value: '\\x89PNG\\x0D\\x0A...' for column 'banner1' at row 1")
+
+Bad Request: /uploadbanner/
+HTTP 400 response started for ['127.0.0.1', 51994]
+HTTP close for ['127.0.0.1', 51994]
+HTTP response complete for ['127.0.0.1', 51994]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 52697]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 52697]
+HTTP close for ['127.0.0.1', 52697]
+HTTP response complete for ['127.0.0.1', 52697]
+HTTP b'GET' request for ['127.0.0.1', 52697]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 52697]
+HTTP close for ['127.0.0.1', 52697]
+HTTP response complete for ['127.0.0.1', 52697]
+HTTP b'GET' request for ['127.0.0.1', 52697]
+Not Found: /favicon.ico
+HTTP 404 response started for ['127.0.0.1', 52697]
+HTTP close for ['127.0.0.1', 52697]
+HTTP response complete for ['127.0.0.1', 52697]
+HTTP b'GET' request for ['127.0.0.1', 52697]
+HTTP 301 response started for ['127.0.0.1', 52697]
+HTTP close for ['127.0.0.1', 52697]
+HTTP response complete for ['127.0.0.1', 52697]
+HTTP b'GET' request for ['127.0.0.1', 52697]
+HTTP 200 response started for ['127.0.0.1', 52697]
+HTTP close for ['127.0.0.1', 52697]
+HTTP response complete for ['127.0.0.1', 52697]
+HTTP b'OPTIONS' request for ['127.0.0.1', 52742]
+HTTP 200 response started for ['127.0.0.1', 52742]
+HTTP close for ['127.0.0.1', 52742]
+HTTP response complete for ['127.0.0.1', 52742]
+HTTP b'OPTIONS' request for ['127.0.0.1', 52742]
+HTTP 200 response started for ['127.0.0.1', 52742]
+HTTP close for ['127.0.0.1', 52742]
+HTTP response complete for ['127.0.0.1', 52742]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 52950]
+HTTP 200 response started for ['127.0.0.1', 52950]
+HTTP close for ['127.0.0.1', 52950]
+HTTP response complete for ['127.0.0.1', 52950]
+HTTP b'GET' request for ['127.0.0.1', 52950]
+HTTP 200 response started for ['127.0.0.1', 52950]
+HTTP close for ['127.0.0.1', 52950]
+HTTP response complete for ['127.0.0.1', 52950]
+HTTP b'OPTIONS' request for ['127.0.0.1', 52957]
+HTTP 200 response started for ['127.0.0.1', 52957]
+HTTP close for ['127.0.0.1', 52957]
+HTTP response complete for ['127.0.0.1', 52957]
+HTTP b'OPTIONS' request for ['127.0.0.1', 52957]
+HTTP 200 response started for ['127.0.0.1', 52957]
+HTTP close for ['127.0.0.1', 52957]
+HTTP response complete for ['127.0.0.1', 52957]
+HTTP b'GET' request for ['127.0.0.1', 52974]
+HTTP 200 response started for ['127.0.0.1', 52974]
+HTTP close for ['127.0.0.1', 52974]
+HTTP response complete for ['127.0.0.1', 52974]
+HTTP b'OPTIONS' request for ['127.0.0.1', 52957]
+HTTP 200 response started for ['127.0.0.1', 52957]
+HTTP close for ['127.0.0.1', 52957]
+HTTP response complete for ['127.0.0.1', 52957]
+HTTP b'POST' request for ['127.0.0.1', 52996]
+Files received: <MultiValueDict: {'file1': [<InMemoryUploadedFile: converted_image.png (image/png)>], 'file2': [<InMemoryUploadedFile: converted_image (1).png (image/png)>], 'file3': [<InMemoryUploadedFile: avatar-14.png (image/png)>]}>
+HTTP 200 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'GET' request for ['127.0.0.1', 52996]
+HTTP 200 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'GET' request for ['127.0.0.1', 52996]
+HTTP 200 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'POST' request for ['127.0.0.1', 52996]
+Files received: <MultiValueDict: {'file1': [<InMemoryUploadedFile: converted_image.png (image/png)>], 'file2': [<InMemoryUploadedFile: converted_image (1).png (image/png)>], 'file3': [<InMemoryUploadedFile: avatar-14.png (image/png)>]}>
+HTTP 200 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'GET' request for ['127.0.0.1', 52996]
+HTTP 200 response started for ['127.0.0.1', 52996]
+HTTP response chunk for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'GET' request for ['127.0.0.1', 52996]
+HTTP 200 response started for ['127.0.0.1', 52996]
+HTTP response chunk for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'GET' request for ['127.0.0.1', 52996]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'GET' request for ['127.0.0.1', 52996]
+HTTP 301 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'GET' request for ['127.0.0.1', 52996]
+HTTP 200 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+HTTP b'POST' request for ['127.0.0.1', 52996]
+Not Found: /homepage_uplod/
+HTTP 404 response started for ['127.0.0.1', 52996]
+HTTP close for ['127.0.0.1', 52996]
+HTTP response complete for ['127.0.0.1', 52996]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'POST' request for ['127.0.0.1', 53161]
+Not Found: /homepage_uplod/
+HTTP 404 response started for ['127.0.0.1', 53161]
+HTTP close for ['127.0.0.1', 53161]
+HTTP response complete for ['127.0.0.1', 53161]
+HTTP b'GET' request for ['127.0.0.1', 53161]
+HTTP 200 response started for ['127.0.0.1', 53161]
+HTTP close for ['127.0.0.1', 53161]
+HTTP response complete for ['127.0.0.1', 53161]
+HTTP b'POST' request for ['127.0.0.1', 53161]
+Files received: <MultiValueDict: {'college_home': [<InMemoryUploadedFile: 8d4d19e08e67378af0e79f1bbe9ac3dd.jpg (image/jpeg)>], 'intern_home': [<InMemoryUploadedFile: download.jpg (image/jpeg)>]}>
+HTTP 200 response started for ['127.0.0.1', 53161]
+HTTP close for ['127.0.0.1', 53161]
+HTTP response complete for ['127.0.0.1', 53161]
+HTTP b'GET' request for ['127.0.0.1', 53161]
+HTTP 200 response started for ['127.0.0.1', 53161]
+HTTP close for ['127.0.0.1', 53161]
+HTTP response complete for ['127.0.0.1', 53161]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 53216]
+HTTP 200 response started for ['127.0.0.1', 53216]
+HTTP response chunk for ['127.0.0.1', 53216]
+HTTP response chunk for ['127.0.0.1', 53216]
+HTTP close for ['127.0.0.1', 53216]
+HTTP response complete for ['127.0.0.1', 53216]
+HTTP b'GET' request for ['127.0.0.1', 53340]
+HTTP 200 response started for ['127.0.0.1', 53340]
+HTTP close for ['127.0.0.1', 53340]
+HTTP response complete for ['127.0.0.1', 53340]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 56135]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 56135]
+HTTP close for ['127.0.0.1', 56135]
+HTTP response complete for ['127.0.0.1', 56135]
+HTTP b'GET' request for ['127.0.0.1', 56135]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 56135]
+HTTP close for ['127.0.0.1', 56135]
+HTTP response complete for ['127.0.0.1', 56135]
+HTTP b'GET' request for ['127.0.0.1', 56135]
+HTTP 301 response started for ['127.0.0.1', 56135]
+HTTP close for ['127.0.0.1', 56135]
+HTTP response complete for ['127.0.0.1', 56135]
+HTTP b'GET' request for ['127.0.0.1', 56135]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 133, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'eventlist' not found. 'eventlist' is not a valid view function or pattern name.
+HTTP 500 response started for ['127.0.0.1', 56135]
+HTTP response chunk for ['127.0.0.1', 56135]
+HTTP close for ['127.0.0.1', 56135]
+HTTP response complete for ['127.0.0.1', 56135]
+HTTP b'GET' request for ['127.0.0.1', 56229]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 133, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'eventlist' not found. 'eventlist' is not a valid view function or pattern name.
+HTTP 500 response started for ['127.0.0.1', 56229]
+HTTP response chunk for ['127.0.0.1', 56229]
+HTTP close for ['127.0.0.1', 56229]
+HTTP response complete for ['127.0.0.1', 56229]
+HTTP b'GET' request for ['127.0.0.1', 56229]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 133, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'eventlist' not found. 'eventlist' is not a valid view function or pattern name.
+HTTP 500 response started for ['127.0.0.1', 56229]
+HTTP response chunk for ['127.0.0.1', 56229]
+HTTP close for ['127.0.0.1', 56229]
+HTTP response complete for ['127.0.0.1', 56229]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 56251]
+HTTP 200 response started for ['127.0.0.1', 56251]
+HTTP close for ['127.0.0.1', 56251]
+HTTP response complete for ['127.0.0.1', 56251]
+HTTP b'GET' request for ['127.0.0.1', 56251]
+Error in eventuploaded_list: (1146, "Table 'altruistystartuplaunchpad1.eventsimage' doesn't exist")
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'altruistystartuplaunchpad1.eventsimage' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 142, in eventuploaded_list
+    for event in events:
+                 ^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'altruistystartuplaunchpad1.eventsimage' doesn't exist")
+
+HTTP 200 response started for ['127.0.0.1', 56251]
+HTTP close for ['127.0.0.1', 56251]
+HTTP response complete for ['127.0.0.1', 56251]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 56284]
+HTTP 200 response started for ['127.0.0.1', 56284]
+HTTP close for ['127.0.0.1', 56284]
+HTTP response complete for ['127.0.0.1', 56284]
+HTTP b'GET' request for ['127.0.0.1', 56284]
+HTTP 200 response started for ['127.0.0.1', 56284]
+HTTP close for ['127.0.0.1', 56284]
+HTTP response complete for ['127.0.0.1', 56284]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59377]
+HTTP 200 response started for ['127.0.0.1', 59377]
+HTTP close for ['127.0.0.1', 59377]
+HTTP response complete for ['127.0.0.1', 59377]
+HTTP b'POST' request for ['127.0.0.1', 59472]
+Not Found: /event_upload/
+HTTP 404 response started for ['127.0.0.1', 59472]
+HTTP close for ['127.0.0.1', 59472]
+HTTP response complete for ['127.0.0.1', 59472]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59681]
+HTTP 200 response started for ['127.0.0.1', 59681]
+HTTP close for ['127.0.0.1', 59681]
+HTTP response complete for ['127.0.0.1', 59681]
+HTTP b'POST' request for ['127.0.0.1', 59681]
+Not Found: /event_upload/
+HTTP 404 response started for ['127.0.0.1', 59681]
+HTTP close for ['127.0.0.1', 59681]
+HTTP response complete for ['127.0.0.1', 59681]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59767]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 124, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'event_list' not found. 'event_list' is not a valid view function or pattern name.
+HTTP 500 response started for ['127.0.0.1', 59767]
+HTTP response chunk for ['127.0.0.1', 59767]
+HTTP close for ['127.0.0.1', 59767]
+HTTP response complete for ['127.0.0.1', 59767]
+HTTP b'GET' request for ['127.0.0.1', 59767]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 124, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'event_list' not found. 'event_list' is not a valid view function or pattern name.
+HTTP 500 response started for ['127.0.0.1', 59767]
+HTTP response chunk for ['127.0.0.1', 59767]
+HTTP close for ['127.0.0.1', 59767]
+HTTP response complete for ['127.0.0.1', 59767]
+HTTP b'GET' request for ['127.0.0.1', 59767]
+Not Found: /events_uploa
+HTTP 404 response started for ['127.0.0.1', 59767]
+HTTP close for ['127.0.0.1', 59767]
+HTTP response complete for ['127.0.0.1', 59767]
+HTTP b'GET' request for ['127.0.0.1', 59767]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 124, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'event_list' not found. 'event_list' is not a valid view function or pattern name.
+HTTP 500 response started for ['127.0.0.1', 59767]
+HTTP response chunk for ['127.0.0.1', 59767]
+HTTP close for ['127.0.0.1', 59767]
+HTTP response complete for ['127.0.0.1', 59767]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59779]
+HTTP 200 response started for ['127.0.0.1', 59779]
+HTTP close for ['127.0.0.1', 59779]
+HTTP response complete for ['127.0.0.1', 59779]
+HTTP b'OPTIONS' request for ['127.0.0.1', 59837]
+Not Found: /event_upload/
+HTTP 404 response started for ['127.0.0.1', 59837]
+HTTP close for ['127.0.0.1', 59837]
+HTTP response complete for ['127.0.0.1', 59837]
+HTTP b'GET' request for ['127.0.0.1', 59779]
+HTTP 200 response started for ['127.0.0.1', 59779]
+HTTP close for ['127.0.0.1', 59779]
+HTTP response complete for ['127.0.0.1', 59779]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59870]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 124, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+HTTP 500 response started for ['127.0.0.1', 59870]
+HTTP response chunk for ['127.0.0.1', 59870]
+HTTP close for ['127.0.0.1', 59870]
+HTTP response complete for ['127.0.0.1', 59870]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59882]
+Internal Server Error: /events_upload/
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 124, in events_upload
+    return render(request, 'Master/event_upload.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'eventuploaded_list' not found. 'eventuploaded_list' is not a valid view function or pattern name.
+HTTP 500 response started for ['127.0.0.1', 59882]
+HTTP response chunk for ['127.0.0.1', 59882]
+HTTP close for ['127.0.0.1', 59882]
+HTTP response complete for ['127.0.0.1', 59882]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59894]
+HTTP 200 response started for ['127.0.0.1', 59894]
+HTTP close for ['127.0.0.1', 59894]
+HTTP response complete for ['127.0.0.1', 59894]
+HTTP b'GET' request for ['127.0.0.1', 59894]
+HTTP 200 response started for ['127.0.0.1', 59894]
+HTTP close for ['127.0.0.1', 59894]
+HTTP response complete for ['127.0.0.1', 59894]
+HTTP b'POST' request for ['127.0.0.1', 59894]
+Files received: <MultiValueDict: {'events': [<InMemoryUploadedFile: 2048-icon-253x256-fhzcbp2n.png (image/png)>]}>
+HTTP 200 response started for ['127.0.0.1', 59894]
+HTTP close for ['127.0.0.1', 59894]
+HTTP response complete for ['127.0.0.1', 59894]
+HTTP b'GET' request for ['127.0.0.1', 59894]
+HTTP 200 response started for ['127.0.0.1', 59894]
+HTTP close for ['127.0.0.1', 59894]
+HTTP response complete for ['127.0.0.1', 59894]
+HTTP b'GET' request for ['127.0.0.1', 59894]
+HTTP 200 response started for ['127.0.0.1', 59894]
+HTTP close for ['127.0.0.1', 59894]
+HTTP response complete for ['127.0.0.1', 59894]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59937]
+HTTP 200 response started for ['127.0.0.1', 59937]
+HTTP close for ['127.0.0.1', 59937]
+HTTP response complete for ['127.0.0.1', 59937]
+HTTP b'GET' request for ['127.0.0.1', 59937]
+HTTP 200 response started for ['127.0.0.1', 59937]
+HTTP close for ['127.0.0.1', 59937]
+HTTP response complete for ['127.0.0.1', 59937]
+HTTP b'GET' request for ['127.0.0.1', 59937]
+HTTP 200 response started for ['127.0.0.1', 59937]
+HTTP close for ['127.0.0.1', 59937]
+HTTP response complete for ['127.0.0.1', 59937]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59957]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 59957]
+HTTP close for ['127.0.0.1', 59957]
+HTTP response complete for ['127.0.0.1', 59957]
+HTTP b'GET' request for ['127.0.0.1', 59957]
+HTTP 200 response started for ['127.0.0.1', 59957]
+HTTP response chunk for ['127.0.0.1', 59957]
+HTTP close for ['127.0.0.1', 59957]
+HTTP response complete for ['127.0.0.1', 59957]
+HTTP b'GET' request for ['127.0.0.1', 59957]
+HTTP 200 response started for ['127.0.0.1', 59957]
+HTTP close for ['127.0.0.1', 59957]
+HTTP response complete for ['127.0.0.1', 59957]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59976]
+Error in eventuploaded_list: admin/base_admin.html
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 131, in eventuploaded_list
+    return render(request, 'Master/eventlist.html', {'banners': events_list})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+HTTP 200 response started for ['127.0.0.1', 59976]
+HTTP close for ['127.0.0.1', 59976]
+HTTP response complete for ['127.0.0.1', 59976]
+HTTP b'GET' request for ['127.0.0.1', 59976]
+Error in eventuploaded_list: admin/base_admin.html
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 131, in eventuploaded_list
+    return render(request, 'Master/eventlist.html', {'banners': events_list})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+HTTP 200 response started for ['127.0.0.1', 59976]
+HTTP close for ['127.0.0.1', 59976]
+HTTP response complete for ['127.0.0.1', 59976]
+HTTP b'GET' request for ['127.0.0.1', 59976]
+Error in eventuploaded_list: admin/base_admin.html
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 131, in eventuploaded_list
+    return render(request, 'Master/eventlist.html', {'banners': events_list})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+HTTP 200 response started for ['127.0.0.1', 59976]
+HTTP close for ['127.0.0.1', 59976]
+HTTP response complete for ['127.0.0.1', 59976]
+HTTP b'GET' request for ['127.0.0.1', 59976]
+Error in eventuploaded_list: admin/base_admin.html
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 131, in eventuploaded_list
+    return render(request, 'Master/eventlist.html', {'banners': events_list})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+HTTP 200 response started for ['127.0.0.1', 59976]
+HTTP close for ['127.0.0.1', 59976]
+HTTP response complete for ['127.0.0.1', 59976]
+HTTP b'GET' request for ['127.0.0.1', 59976]
+Error in eventuploaded_list: admin/base_admin.html
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 131, in eventuploaded_list
+    return render(request, 'Master/eventlist.html', {'banners': events_list})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+HTTP 200 response started for ['127.0.0.1', 59976]
+HTTP close for ['127.0.0.1', 59976]
+HTTP response complete for ['127.0.0.1', 59976]
+HTTP b'GET' request for ['127.0.0.1', 59976]
+Error in eventuploaded_list: admin/base_admin.html
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 131, in eventuploaded_list
+    return render(request, 'Master/eventlist.html', {'banners': events_list})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+HTTP 200 response started for ['127.0.0.1', 59976]
+HTTP close for ['127.0.0.1', 59976]
+HTTP response complete for ['127.0.0.1', 59976]
+HTTP b'GET' request for ['127.0.0.1', 59976]
+Error in eventuploaded_list: admin/base_admin.html
+Traceback (most recent call last):
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abish\source\repos\Startup_launchpad_admin\Banner\views.py", line 131, in eventuploaded_list
+    return render(request, 'Master/eventlist.html', {'banners': events_list})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\abish\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin/base_admin.html
+
+HTTP 200 response started for ['127.0.0.1', 59976]
+HTTP close for ['127.0.0.1', 59976]
+HTTP response complete for ['127.0.0.1', 59976]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 59992]
+HTTP 200 response started for ['127.0.0.1', 59992]
+HTTP close for ['127.0.0.1', 59992]
+HTTP response complete for ['127.0.0.1', 59992]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 60007]
+HTTP 200 response started for ['127.0.0.1', 60007]
+HTTP close for ['127.0.0.1', 60007]
+HTTP response complete for ['127.0.0.1', 60007]
+HTTP b'GET' request for ['127.0.0.1', 60007]
+Not Found: /event_upload/
+HTTP 404 response started for ['127.0.0.1', 60007]
+HTTP close for ['127.0.0.1', 60007]
+HTTP response complete for ['127.0.0.1', 60007]
+HTTP b'GET' request for ['127.0.0.1', 60007]
+HTTP 200 response started for ['127.0.0.1', 60007]
+HTTP close for ['127.0.0.1', 60007]
+HTTP response complete for ['127.0.0.1', 60007]
+HTTP b'POST' request for ['127.0.0.1', 60007]
+Files received: <MultiValueDict: {'events': [<InMemoryUploadedFile: 2048-icon-253x256-fhzcbp2n.png (image/png)>]}>
+HTTP 200 response started for ['127.0.0.1', 60007]
+HTTP close for ['127.0.0.1', 60007]
+HTTP response complete for ['127.0.0.1', 60007]
+HTTP b'GET' request for ['127.0.0.1', 60007]
+HTTP 200 response started for ['127.0.0.1', 60007]
+HTTP close for ['127.0.0.1', 60007]
+HTTP response complete for ['127.0.0.1', 60007]
+HTTP b'GET' request for ['127.0.0.1', 60007]
+HTTP 200 response started for ['127.0.0.1', 60007]
+HTTP close for ['127.0.0.1', 60007]
+HTTP response complete for ['127.0.0.1', 60007]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 60037]
+HTTP 200 response started for ['127.0.0.1', 60037]
+HTTP close for ['127.0.0.1', 60037]
+HTTP response complete for ['127.0.0.1', 60037]
+HTTP b'GET' request for ['127.0.0.1', 60037]
+HTTP 200 response started for ['127.0.0.1', 60037]
+HTTP close for ['127.0.0.1', 60037]
+HTTP response complete for ['127.0.0.1', 60037]
+HTTP b'OPTIONS' request for ['127.0.0.1', 60044]
+Not Found: /event_upload/
+HTTP 404 response started for ['127.0.0.1', 60044]
+HTTP close for ['127.0.0.1', 60044]
+HTTP response complete for ['127.0.0.1', 60044]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 60086]
+HTTP 200 response started for ['127.0.0.1', 60086]
+HTTP close for ['127.0.0.1', 60086]
+HTTP response complete for ['127.0.0.1', 60086]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 60539]
+Not Found: /college_home/
+HTTP 404 response started for ['127.0.0.1', 60539]
+HTTP close for ['127.0.0.1', 60539]
+HTTP response complete for ['127.0.0.1', 60539]
+HTTP b'GET' request for ['127.0.0.1', 60539]
+HTTP 200 response started for ['127.0.0.1', 60539]
+HTTP close for ['127.0.0.1', 60539]
+HTTP response complete for ['127.0.0.1', 60539]
+HTTP b'GET' request for ['127.0.0.1', 60539]
+HTTP 200 response started for ['127.0.0.1', 60539]
+HTTP close for ['127.0.0.1', 60539]
+HTTP response complete for ['127.0.0.1', 60539]
+Killed 0 pending application instances
+Starting server at tcp:port=8000:interface=0.0.0.0
+HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Configuring endpoint tcp:port=8000:interface=0.0.0.0
+Listening on TCP address 0.0.0.0:8000
+HTTP b'GET' request for ['127.0.0.1', 61253]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 61253]
+HTTP close for ['127.0.0.1', 61253]
+HTTP response complete for ['127.0.0.1', 61253]
+HTTP b'GET' request for ['127.0.0.1', 61253]
+HTTP 301 response started for ['127.0.0.1', 61253]
+HTTP close for ['127.0.0.1', 61253]
+HTTP response complete for ['127.0.0.1', 61253]
+HTTP b'GET' request for ['127.0.0.1', 61253]
+HTTP 200 response started for ['127.0.0.1', 61253]
+HTTP close for ['127.0.0.1', 61253]
+HTTP response complete for ['127.0.0.1', 61253]
+HTTP b'GET' request for ['127.0.0.1', 61253]
+HTTP 200 response started for ['127.0.0.1', 61253]
+HTTP response chunk for ['127.0.0.1', 61253]
+HTTP close for ['127.0.0.1', 61253]
+HTTP response complete for ['127.0.0.1', 61253]
+HTTP b'GET' request for ['127.0.0.1', 61253]
+Not Found: /bannerform
+HTTP 404 response started for ['127.0.0.1', 61253]
+HTTP close for ['127.0.0.1', 61253]
+HTTP response complete for ['127.0.0.1', 61253]
+HTTP b'GET' request for ['127.0.0.1', 61253]
+HTTP 200 response started for ['127.0.0.1', 61253]
+HTTP close for ['127.0.0.1', 61253]
+HTTP response complete for ['127.0.0.1', 61253]
+HTTP b'GET' request for ['127.0.0.1', 56783]
+HTTP 200 response started for ['127.0.0.1', 56783]
+HTTP response chunk for ['127.0.0.1', 56783]
+HTTP close for ['127.0.0.1', 56783]
+HTTP response complete for ['127.0.0.1', 56783]
+HTTP b'GET' request for ['127.0.0.1', 56825]
+Not Found: /
+HTTP 404 response started for ['127.0.0.1', 56825]
+HTTP close for ['127.0.0.1', 56825]
+HTTP response complete for ['127.0.0.1', 56825]
+HTTP b'GET' request for ['127.0.0.1', 56825]
+HTTP 301 response started for ['127.0.0.1', 56825]
+HTTP close for ['127.0.0.1', 56825]
+HTTP response complete for ['127.0.0.1', 56825]
+HTTP b'GET' request for ['127.0.0.1', 56825]
+HTTP 200 response started for ['127.0.0.1', 56825]
+HTTP close for ['127.0.0.1', 56825]
+HTTP response complete for ['127.0.0.1', 56825]
+HTTP b'GET' request for ['127.0.0.1', 56825]
+HTTP 200 response started for ['127.0.0.1', 56825]
+HTTP response chunk for ['127.0.0.1', 56825]
+HTTP response chunk for ['127.0.0.1', 56825]
+HTTP close for ['127.0.0.1', 56825]
+HTTP response complete for ['127.0.0.1', 56825]
+HTTP b'GET' request for ['127.0.0.1', 56825]
+HTTP 200 response started for ['127.0.0.1', 56825]
+HTTP close for ['127.0.0.1', 56825]
+HTTP response complete for ['127.0.0.1', 56825]
+HTTP b'GET' request for ['127.0.0.1', 56856]
+HTTP 200 response started for ['127.0.0.1', 56856]
+HTTP close for ['127.0.0.1', 56856]
+HTTP response complete for ['127.0.0.1', 56856]
+HTTP b'GET' request for ['127.0.0.1', 56856]
+HTTP 200 response started for ['127.0.0.1', 56856]
+HTTP close for ['127.0.0.1', 56856]
+HTTP response complete for ['127.0.0.1', 56856]
+Killed 0 pending application instances

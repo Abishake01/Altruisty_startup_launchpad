@@ -22,3 +22,14 @@ class HomeImage(models.Model):
 
     def __str__(self):
         return f"HomeImage {self.id} - {self.uploaded_at}"
+    
+class Events_update(models.Model):
+    
+    events = models.BinaryField(null=True, blank=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        db_table = 'eventsimage'
+
+    def __str__(self):
+        return f"Events_update {self.id} - {self.uploaded_at}"
